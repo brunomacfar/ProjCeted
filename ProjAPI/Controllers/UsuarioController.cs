@@ -5,8 +5,11 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ProjAPI.Data;
 using ProjAPI.Model;
+using ProjRepositorio;
+using AutoMapper;
+using ProjAPI.Dtos;
+using ProjDominio;
 
 namespace ProjAPI.Controllers
 {
@@ -15,57 +18,129 @@ namespace ProjAPI.Controllers
 
     public class UsuarioController : ControllerBase
     {
-        public readonly DataContext _context;
-        public UsuarioController(DataContext context)
+        private readonly IProjRepositorio _repo;
+        private readonly IMapper _mapper;
+        public UsuarioController(IProjRepositorio repo,
+                                IMapper mapper)
         {
-            _context = context;
+            _repo = repo;
+            _mapper = mapper;
         }
 
         [HttpGet]
         public async Task<ActionResult> Get()
-         {
-             try
-             {
-                 var results = await _context.Users.ToListAsync();
-                 return Ok(results); 
-             }
-             catch (System.Exception)
-             {
-                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no Banco de Dados");
-             }   
-         }
+        {
+            try
+            {
+                var usuarios = await _repo.GetAllUsuariosAsync();
+                var results = _mapper.Map<UsuarioDto[]>(usuarios);
 
-        [HttpGet("{id}")]
+                return Ok(results);
+            }
+            catch (System.Exception ex)
+            {
+                string teste = " estouu /n/n/nn/  \n \n \n \n ";
+                return this.StatusCode(StatusCodes.Status500InternalServerError, teste);
+            }
+        }
+
+        [HttpGet("{Id}")]
         public async Task<ActionResult> Get(int id)
         {
             try
             {
-                var results = await _context.Users
-                                    .FirstOrDefaultAsync(x => x.Id == id); 
+                var usuario = await _repo.GetAllUsuariosAsyncById(id);
+                var results = _mapper.Map<UsuarioDto>(usuario);
                 return Ok(results);
             }
             catch (System.Exception)
             {
                 return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no Banco de Dados");
             }
-        } 
-
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, User user)
-        {
-            return null;
-        } 
-
-        [HttpPost]
-        public async Task<ActionResult<User>> Create(User user)
-        {
-            return null;
         }
 
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteTodoItem(long id)
+        [HttpGet("getByNome/{Nome}")]
+        public async Task<ActionResult> Get(string nome)
         {
-            return null;
+            try
+            {
+                var usuarios = await _repo.GetAllUsuariosAsyncByNome(nome); 
+                var results = _mapper.Map<UsuarioDto[]>(usuarios);
+
+                return Ok(results);
+            }
+            catch (System.Exception)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no Banco de Dados");
+            }
+        }
+
+        [HttpPost]
+        public async Task<ActionResult> Post(UsuarioDto model)
+        {
+            try
+            {
+                var usuario = _mapper.Map<Usuario>(model);
+                _repo.Add(usuario);
+
+                if (await _repo.SaveChangedAsync())
+                {
+                    return Created($"/api/usuario/{model.Id}", _mapper.Map<UsuarioDto>(usuario));
+
+                }
+            }
+            catch (System.Exception ex)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, $" Falha no Banco de Dados {ex.Message}");
+            }
+            return BadRequest();
+        }
+
+
+        [HttpPut("{Id}")]
+        public async Task<IActionResult> Put(int id, UsuarioDto model)
+        {
+            try
+            {
+                var usuario = await _repo.GetAllUsuariosAsyncById(id);
+                
+                if (usuario == null) return NotFound();
+
+                _mapper.Map(model, usuario);
+                _repo.Update(usuario);
+                if (await _repo.SaveChangedAsync())
+                {
+                    return Created($"api/usuario/{model.Id}", _mapper.Map<UsuarioDto>(usuario));
+                }
+            }
+            catch (System.Exception ex)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError,  $" Falha no Banco de Dados {ex.Message}");
+            }
+            return BadRequest();
+        }
+
+        [HttpDelete("{Id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            try
+            {
+                var usuario = await _repo.GetAllUsuariosAsyncById(id);
+                
+                if (usuario == null) return NotFound();
+
+                _repo.Delete(usuario);
+
+                if (await _repo.SaveChangedAsync())
+                {
+                    return Ok();
+                }
+            }
+            catch (System.Exception ex)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no Banco de Dados" + ex.Message);
+            }
+            return BadRequest();
         }
     }
 }

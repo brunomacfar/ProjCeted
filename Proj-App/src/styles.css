@@ -1,3 +1,492 @@
 /* You can add global styles to this file, and also import other style files */
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-@import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css'
+@import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+body{
+    background: url('/assets/_img/museuGallery/imgFundo.jpg') center center no-repeat fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color: black;
+}
+#logoOficial{
+    margin-top: 20;
+    margin-left: 30;
+    width: 140px;
+    height: 55px;
+}
+#content{
+    padding-top: 70px;
+    max-width: auto;
+    width: 100%;
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.85);
+    margin: 0px;
+    position: relative;
+}
+#textGeral{
+    color: white;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: justify;
+    text-indent: 50px;
+    line-height: 150%;
+    display: block;
+    align-items: center;
+}
+.notImplemented{
+    padding-top: 180px;
+    color: white;
+    
+    padding: 3em;
+    width: 50%;
+    margin-top: 150px;
+    margin: 0em auto 10em;
+  
+}
+
+/* ----------------------------------------------------
+        Aqui temos o CSS do NAVBAR PRINCIPAL
+   ----------------------------------------------------*/
+#nav-main{
+    position:fixed;
+    background-color:rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(3px);
+	width:100%;
+    height:95px;
+    margin-top: 0px;
+}
+
+#nav-font{   
+    width:159.76px;
+    height: 40px;
+    color: white;
+    font-family:Martel;
+	text-align:right;
+    font-size:24px;
+	letter-spacing: 1.5;
+}
+
+/* ----------------------------------------------------
+            Carousel 
+   ----------------------------------------------------*/
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon,
+.carousel-indicators {
+  display: none;
+  
+}
+#carousel {
+    background-color:rgba(0, 0, 0, 0.2);
+    align-items: center;
+    width: 100%;
+    height: 700px;   
+}
+
+/* ---------------------------------------------------- 
+        Aqui temos o CSS do INITNAV
+   ---------------------------------------------------- */
+
+.ng-sidebar--right {
+    background-color:rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    position: relative;
+    width: 732px;
+    height: 838px;
+}
+#fontSidebar{   
+    color: white;
+    font-family: Pridi;
+    font-style: normal;
+    font-weight: bold;
+    text-align: right;
+    font-size: 64px;
+    margin: 60px;
+    letter-spacing:4.5;
+    line-height: 1.56%;
+}
+
+.ng-sidebar--animate {
+    animation: 7s;
+}
+#initSide{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}  
+#dockProprio{
+    z-index: 2;
+    position: absolute;
+    width: 55px;
+    height: 838px;
+    background-color:rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(25px);
+    right: 0;   
+} 
+#initFa{ 
+    z-index: 1;
+    color: white;
+    position: absolute;
+    margin: -2px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+/* ----------------------------------------------------
+            O MUSEU     
+   ----------------------------------------------------*/
+#containerMuseu{
+
+}
+#museuContainer{
+    margin-top: 80px;
+    max-width: 900px;
+    width: auto;
+}
+#firstTitulo{
+    color: white;
+    position: relative;
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 50px;
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin-right: auto;
+    margin-bottom: 70px;
+}
+#tituloMuseu{
+    color: white;
+    position: relative;
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 50px;
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin-right: auto;
+    margin-top: 80px;
+    margin-bottom: 70px;
+}
+#tituloLinhaTempo{
+    color: white;
+    position: relative;
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 50px;
+    display: block;
+    align-items: left;
+    text-align: left;
+}
+/*-- Aqui começa o Decreto --*/
+#decreto{
+    max-width: 900px;
+}
+#textDecreto{
+    
+    color: white;
+    position: relative;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: justify;
+    text-indent: 50px;
+    line-height: 150%;
+    display: block;
+    align-items: center;
+    width: auto;
+}
+#decretoIcon{
+    position: relative;
+    width: 235px;
+    height: 306px;
+    margin-top: auto;
+    margin-bottom: auto; 
+}
+/* -         Aqui começam o itens #timeLine          -*/
+#timeLine{
+    margin-top: 80px;
+    padding-bottom: 60px;
+}
+#tl01{ 
+    position: relative;
+    width: 235.92px;
+    height: 214px;
+    float: right;
+}
+#tl02{  
+    width: 458px;
+    height: 102px;
+    left: 559px;
+    top: 112px;
+}
+#tl03{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+#tl04{
+    padding-top: 30px;
+    width: 1100px;
+    height: auto;
+}
+
+#videoPlayer{
+    position: relative;
+    width: 890px;
+    height: 500px;
+    margin-top: 80px;
+    align-items: center;
+}
+/* GALLERY */
+#galleyCont{
+    position: relative;
+    width: 900px;
+    height: 500px;
+    margin-top: 80px;
+    align-content: center;
+}
+#galleryGeral{
+    background-color: rgba(0, 0, 0, 0.85);
+    position: relative;
+    width: auto; 
+}
+
+/*------------------------------------------------------------------
+                 VERIFICAR O QUE AFETA
+----------------------------------------------------------------*/
+
+.galeria {
+    align-items: center;
+    width: 100%;
+    height: 800px;   
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+  }
+.foto{
+    position: absolute;
+    align-items: center;
+    max-width:100%;
+    min-width: 100%;
+    max-height:700px;
+    min-height: 700px;
+    width: auto;
+    height: auto;
+    opacity: 0;
+    animation-name: animacao;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes animacao {
+    25%{
+      opacity: 1;
+      transform: scale(1.1,1.1); 
+    }
+    50%{
+      opacity: 0;
+    }
+  }
+.foto:nth-child(1){
+    }
+.foto:nth-child(2){
+      animation-delay: 5s;
+    }
+.foto:nth-child(3){
+    animation-delay: 10s;
+    }
+  .foto:nth-child(4){
+    animation-delay: 15s;
+    }
+
+
+
+/* ----------------------------------------------------
+            Footer 
+   ----------------------------------------------------*/
+
+footer{
+    background-color: rgba(0, 0, 0, 0.85); 
+}
+#footerContainer{
+    border-top:1px solid rgb(255, 255, 255); 
+    width: 100%;
+    height: 400px;
+    left: 100px;
+    right: 100px;
+}
+#card1 { 
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    margin-top: 70px;
+    color: rgb(255, 255, 255);
+    font-family: Merriweather;
+	font-style: bold;
+    font-weight: 900;
+    font-size: 18px;
+    text-align: left;
+    line-height: 23px;
+    letter-spacing: -0.015em;
+}
+#cardCentro { 
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    margin-top: 70px;
+    color: white;
+    font-family: Merriweather;
+	font-style: bold;
+    font-weight: 900;
+    font-size: 18px;
+    text-align: center;
+    line-height: 23px;
+    letter-spacing: -0.015em;
+}
+#textCentro {     
+    margin-top: 21px;
+    text-align: center;
+    color: white;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.15px;
+    height: 22px;
+    bottom: 247.56px;   
+}
+#textCard {     
+    margin-top: 21px;
+    text-align: left;
+    color: white;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.15px;
+    height: 22px;
+    bottom: 247.56px;   
+}
+
+.fa-envelope,
+.fa-phone-alt{
+    color: white;
+    size: 5x;
+
+}
+
+#sapateiro{
+    position: relative;
+    width: 103px;
+    height: 103px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: -15px;
+}
+#logoFeevale{
+    color: white;
+    position: relative;
+    width: 169px;
+    height: 42px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+
+
+/* ----------------------------------------------------
+        Elementos adicionais
+   ----------------------------------------------------*/
+
+#toastr-container > div {
+    opacity: 1;
+}
+
+/* ----------------------------------------------------
+        Agenda
+   ----------------------------------------------------*/
+
+.mat-calendar{
+    background-color: rgba(182, 182, 182, 0.3);
+    color: rgb(255, 255, 255);
+    width: 250px;
+    height: 310px;
+    border-radius: 5px;
+    margin-top: 150px;
+    margin-left: 6.5%;
+    position: fixed;
+    
+}
+#agendaContainer{
+    margin-top: 80px;
+    width: auto;
+    margin-left: 25%;
+    margin-right: 2.5%;
+}
+#agendaTitulo{
+    color: white;
+    position: relative;
+    font-family: Merriweather;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 50px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 70px;
+    width: auto;
+    
+}
+.card{
+    background-color: rgb(0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    margin-bottom: 28px;
+}
+.card-title {
+    color: rgba(255, 255, 255, 1);
+    font-family: Martel;
+}
+
+.card-body,
+.a {
+    color: rgb(255, 255, 255);
+    font-family: Roboto, "Helvetica Neue", sans-serif
+}
+
+
+
+#horizontal{
+    position: relative;
+    margin-top: 80px;
+    width: 1200px;
+    height: auto;
+    color: rgb(1, 1, 1);
+    background-color: silver;
+}
+
+
+
+
+
+
+
+
+
+
+

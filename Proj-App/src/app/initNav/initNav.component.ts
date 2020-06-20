@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { SidebarModule } from 'ng-sidebar';
 
 @Component({
+  // tslint:disable-next-line: component-selector
   selector: 'app-initNav',
   templateUrl: './initNav.component.html',
   styleUrls: ['./initNav.component.css']
 })
-export class InitNavComponent implements OnInit {
+export class InitNavComponent {
 
-  private _opened = false;
-  constructor(private toggleSidebar: SidebarModule ) { }
+  _opened: boolean = false;
+  _dock: boolean = false;
+  _closeOnClickOutside: boolean = true;
+  _animate: boolean = true;
+  showIndicator: boolean = false;
 
-  ngOnInit() {
-  }
-  
   _toggleSidebar() {
     this._opened = !this._opened;
   }

@@ -1,0 +1,150 @@
+<div id="content">
+  <div id="containerMuseu">
+    <div class="container" id="museuContainer">
+      <h1 id="firstTitulo">Quem Somos</h1>
+      <p id="textGeral">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Id consectetur purus
+        ut faucibus pulvinar elementum integer enim neque. Facilisis mauris sit
+        amet massa vitae tortor condimentum. Sit amet consectetur adipiscing
+        elit pellentesque habitant morbi tristique. Mauris sit amet massa vitae
+        tortor condimentum lacinia. Aliquam faucibus purus in massa. Bibendum
+        neque egestas congue quisque egestas.
+      </p>
+      <p id="textGeral">
+        Sed cras ornare arcu dui vivamus arcu. Viverra mauris in aliquam sem
+        fringilla ut. Nec dui nunc mattis enim ut tellus. Quis varius quam
+        quisque id diam vel quam elementum. Orci eu lobortis elementum nibh
+        tellus molestie. Viverra nam libero justo laoreet sit amet cursus sit
+        amet. Elementum pulvinar etiam non quam. Facilisi morbi tempus iaculis
+        urna id volutpat lacus laoreet non. Et magnis dis parturient montes
+        nascetur ridiculus mus mauris vitae. Varius sit amet mattis vulputate
+        enim nulla aliquet porttitor lacus. Pharetra convallis posuere morbi leo
+        urna molestie. Sit amet porttitor eget dolor
+      </p>
+    </div>
+
+    <div class="container" id="videoPlayer">
+      <div class="embed-responsive embed-responsive-4by3" id="videoPlayer">
+        <iframe
+          class="embed-responsive-item"
+          src="https://www.youtube.com/embed/rPVUQMabgT4?rel=0"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+
+    <div class="container" id="museuContainer">
+      <h1 id="tituloMuseu">Nossa História</h1>
+      <p id="textGeral">
+        O Museu Nacional do Calçado (MNC) conserva a memória da atividade
+        coureiro-calçadista do país. Ele reúne um vasto acervo, com calçados
+        desde o século XII, além de sandálias gregas antigas.
+      </p>
+      <p id="textGeral">
+        O espaço também se propõe a promover exposições, cursos, seminários,
+        palestras, encontros, concursos, lançamentos de moda e visitações
+        dirigidas.
+      </p>
+      <p id="textGeral">
+        No local, são realizadas exposições permanentes e temporárias. As
+        mostras temporárias permitem que seu acervo de milhares de peças seja
+        conhecido pelos visitantes. Já a exposição permanente engloba algumas
+        temáticas específicas, como o Hall da Fama, curiosidades, calçados
+        históricos e bancada de sapateiro, entre outras.
+      </p>
+    </div>
+    <!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
+        AQUI COMEÇA O GALLERY IMAGE 
+    -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
+
+    <div class="container" id="galleyCont">
+      <gallery
+        id="galleryGeral"
+        fluid
+        [items]="items"
+        style="
+          -webkit-transform: translateX(0);
+          transform: translateX(0);
+          left: 0;
+        "
+      ></gallery>
+    </div>
+
+    <div class="container" id="decreto">
+      <h1 id="tituloMuseu">Conheça o Decreto</h1>
+      <div class="row">
+        <div class="col-sm-9">
+          <p id="textDecreto">
+            Sit amet consectetur adipiscing elit pellentesque habitant morbi
+            tristique. Mauris sit amet massa vitae tortor condimentum lacinia.
+            Aliquam faucibus purus in massa. Bibendum neque egestas congue
+            quisque egestas. Sed cras ornare arcu dui vivamus arcu. Viverra
+            mauris in aliquam sem fringilla ut.
+          </p>
+          <p id="textDecreto">
+            Nec dui nunc mattis enim ut tellus. Quis varius quam quisque id diam
+            vel quam elementum. Orci eu lobortis elementum nibh tellus molestie.
+            Viverra nam libero justo laoreet sit amet cursus sit amet. Elementum
+            pulvinar etiam non quam. Facilisi morbi tempus iaculis urna id
+            volutpat lacus laoreet non. Et magnis dis parturient montes nascetur
+            ridiculus mus mauris vitae. Varius sit amet mattis vulputate enim
+            nulla aliquet porttitor lacus. Pharetra convallis posuere morbi leo
+            urna molestie. Sit amet porttitor eget dolor
+          </p>
+        </div>
+        <div class="col-sm-3" id="decretoIcon">
+          <img
+            src="/assets/_img/museuGallery/decreto.png"
+            href="https://leismunicipais.com.br/a/rs/n/novo-hamburgo/lei-ordinaria/1998/16/159/lei-ordinaria-n-159-1998-dispoe-sobre-a-distribuicao-de-panfletos-em-vias-publicas-e-da-outras-providencias/"
+            class="rounded"
+            id="museuDecretoIco"
+            alt="Logo Oficial"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="timeLine">
+      <div class="row">
+        <div class="col-sm-5">
+          <img
+            class="rounded"
+            id="tl01"
+            src="/assets/_img/museuGallery/linhaTempo.svg"
+            alt="Linha do tempo"
+          />
+        </div>
+        <div class="col-sm-7">
+          <div class="container">
+            <p id="tituloLinhaTempo">
+              A história do Museu<br />
+              através dos anos
+            </p>
+            <img
+              class="rounded"
+              id="tl02"
+              src="/assets/_img/museuGallery/acessoLinhaTempo.png"
+              routerLink="timeline"
+              alt="Linha do tempo"
+            />
+          </div>
+        </div>
+        <div id="container" id="tl03">
+          <img
+            id="tl04"
+            src="/assets/_img/museuGallery/anoAano.png"
+            alt="Ano a Ano"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="timeline">
+      <horizontal-timeline 
+              [timelineElements]="" 
+              [showContent]="true">
+    </horizontal-timeline>
+    </div>
+
+  </div>
+</div>

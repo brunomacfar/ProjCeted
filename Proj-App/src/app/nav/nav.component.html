@@ -1,44 +1,39 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+
+<nav class="navbar navbar-expand fixed-top"  id="nav-main">  
+  <img src="/assets/_img/logoBrancoOficial.png" class="rounded float-left" id="logoOficial" alt="Logo Oficial">
   <div class="container">
-    <a class="navbar-brand" routerLink="dashboard">Museu do Calçado</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav mx-auto ">
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" routerLink="usuarios">Usuários</a>
+          <a class="nav-link" id="nav-font" routerLink="museu"> O Museu</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" routerLink="#"> Teste 1 </a>
+          <a class="nav-link" id="nav-font" routerLink="acervo"> Acervo</a>
         </li>
         <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" routerLink="#">Teste</a>
+          <a class="nav-link" id="nav-font" routerLink="agenda"> Agenda </a>
         </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" id="nav-font" routerLink="noticias"> Notícias</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" id="nav-font" routerLink="usuarioApp"> Informações</a>
+        </li>
+        <li class="nav-item dropdown" dropdown>
+          <a dropdownToggle class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" style="cursor: pointer; text-transform: capitalize;">
+            Usuário
+          </a>
+          <div *dropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item">
+              Perfil
+            </a>
+            <div role="separator" class="divider"></div>
+            <a class="dropdown-item" style="cursor: pointer">
+              Sair
+            </a>
+          </div>
+        </li>
+        <button class="btn btn-success">Entrar</button>
       </ul>
-    </div>
-
-    <ul class="navbar-nav">
-      <li class="nav-item dropdown" dropdown>
-        <a dropdownToggle class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false" style="cursor: pointer; text-transform: capitalize;">
-          Bruno
-        </a>
-        <div *dropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item">
-            Perfil
-          </a>
-          <div role="separator" class="divider"></div>
-          <a class="dropdown-item" style="cursor: pointer">
-            Sair
-          </a>
-        </div>
-      </li>
-    </ul>
-
-    <button class="btn btn-success">Entrar</button>
-
   </div>
 </nav>

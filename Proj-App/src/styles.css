@@ -11,24 +11,44 @@ body{
     background-size: cover;
     background-color: black;
 }
+/* ----------------------------------------
+            Loader Stuff
+----------------------------------------*/
+.loader-wraper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    
+}
+
 #logoOficial{
     margin-top: 20;
     margin-left: 30;
     width: 140px;
     height: 55px;
 }
-#content{
-    padding-top: 70px;
-    max-width: auto;
-    width: 100%;
-    height:100%;
-    background-color:rgba(0, 0, 0, 0.85);
-    margin: 0px;
+.content{
     position: relative;
+    padding-top: 140px;
+    background-color:rgba(0, 0, 0, 0.65);
+}
+#firstTitulo{
+    position: relative;
+    color: white;
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 50px;
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin-right: auto;
+    margin-bottom: 70px;
 }
 #textGeral{
-    color: white;
     position: relative;
+    color: white;
     font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -42,7 +62,6 @@ body{
 .notImplemented{
     padding-top: 180px;
     color: white;
-    
     padding: 3em;
     width: 50%;
     margin-top: 150px;
@@ -66,7 +85,7 @@ body{
     width:159.76px;
     height: 40px;
     color: white;
-    font-family:Martel;
+    font-family: Martel;
 	text-align:right;
     font-size:24px;
 	letter-spacing: 1.5;
@@ -80,7 +99,6 @@ body{
 .carousel-control-next-icon,
 .carousel-indicators {
   display: none;
-  
 }
 #carousel {
     background-color:rgba(0, 0, 0, 0.2);
@@ -88,11 +106,9 @@ body{
     width: 100%;
     height: 700px;   
 }
-
 /* ---------------------------------------------------- 
         Aqui temos o CSS do INITNAV
    ---------------------------------------------------- */
-
 .ng-sidebar--right {
     background-color:rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(15px);
@@ -141,27 +157,10 @@ body{
 /* ----------------------------------------------------
             O MUSEU     
    ----------------------------------------------------*/
-#containerMuseu{
-
-}
 #museuContainer{
-    margin-top: 80px;
+    width: 100%;
     max-width: 900px;
     width: auto;
-}
-#firstTitulo{
-    color: white;
-    position: relative;
-    font-family: Merriweather;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 40px;
-    line-height: 50px;
-    display: block;
-    align-items: center;
-    text-align: center;
-    margin-right: auto;
-    margin-bottom: 70px;
 }
 #tituloMuseu{
     color: white;
@@ -175,7 +174,7 @@ body{
     align-items: center;
     text-align: center;
     margin-right: auto;
-    margin-top: 80px;
+    margin-top: 70px;
     margin-bottom: 70px;
 }
 #tituloLinhaTempo{
@@ -190,12 +189,23 @@ body{
     align-items: left;
     text-align: left;
 }
-/*-- Aqui começa o Decreto --*/
-#decreto{
-    max-width: 900px;
+#videoPlayer{
+    position: relative;
+    margin-top: 80px;
+    align-items: center;
 }
+#galleyCont{
+    position: relative;
+    margin-top: 80px;
+    align-content: center;
+}
+#galleryGeral{
+    background-color: rgba(0, 0, 0, 0.85);
+    position: relative;
+    width: auto; 
+}
+/*-- Aqui começa o Decreto --*/
 #textDecreto{
-    
     color: white;
     position: relative;
     font-family: Roboto;
@@ -234,95 +244,28 @@ body{
     top: 112px;
 }
 #tl03{
+    margin-top: 40px;
     position: relative;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-#tl04{
-    padding-top: 30px;
-    width: 1100px;
-    height: auto;
-}
-
-#videoPlayer{
-    position: relative;
-    width: 890px;
-    height: 500px;
-    margin-top: 80px;
-    align-items: center;
-}
-/* GALLERY */
-#galleyCont{
-    position: relative;
-    width: 900px;
-    height: 500px;
-    margin-top: 80px;
-    align-content: center;
-}
-#galleryGeral{
-    background-color: rgba(0, 0, 0, 0.85);
-    position: relative;
-    width: auto; 
-}
-
-/*------------------------------------------------------------------
-                 VERIFICAR O QUE AFETA
-----------------------------------------------------------------*/
-
-.galeria {
-    align-items: center;
     width: 100%;
-    height: 800px;   
-    position: relative;
-    overflow: hidden;
-    margin: auto;
-  }
-.foto{
-    position: absolute;
-    align-items: center;
-    max-width:100%;
-    min-width: 100%;
-    max-height:700px;
-    min-height: 700px;
-    width: auto;
-    height: auto;
-    opacity: 0;
-    animation-name: animacao;
-    animation-duration: 20s;
-    animation-iteration-count: infinite;
-  }
-  
-  @keyframes animacao {
-    25%{
-      opacity: 1;
-      transform: scale(1.1,1.1); 
-    }
-    50%{
-      opacity: 0;
-    }
-  }
-.foto:nth-child(1){
-    }
-.foto:nth-child(2){
-      animation-delay: 5s;
-    }
-.foto:nth-child(3){
-    animation-delay: 10s;
-    }
-  .foto:nth-child(4){
-    animation-delay: 15s;
-    }
-
-
+    height: 110px;
+    max-width: 1200px;
+}
+#imgLink :hover{
+    transform: scale(1.1);
+}
+.grow { 
+    transition: all .2s ease-in-out;
+ }
 
 /* ----------------------------------------------------
             Footer 
    ----------------------------------------------------*/
-
 footer{
-    background-color: rgba(0, 0, 0, 0.85); 
+    background-color: rgba(0, 0, 0, 0.95);
+    clear: both; 
+}
+#footerEspace{
+    padding-top: 60px;
 }
 #footerContainer{
     border-top:1px solid rgb(255, 255, 255); 
@@ -381,14 +324,11 @@ footer{
     height: 22px;
     bottom: 247.56px;   
 }
-
 .fa-envelope,
 .fa-phone-alt{
     color: white;
     size: 5x;
-
 }
-
 #sapateiro{
     position: relative;
     width: 103px;
@@ -409,36 +349,21 @@ footer{
     margin-top: 20px;
 }
 
-
-
-/* ----------------------------------------------------
-        Elementos adicionais
-   ----------------------------------------------------*/
-
-#toastr-container > div {
-    opacity: 1;
-}
-
 /* ----------------------------------------------------
         Agenda
    ----------------------------------------------------*/
-
-.mat-calendar{
+#agendaT{
     background-color: rgba(182, 182, 182, 0.3);
     color: rgb(255, 255, 255);
     width: 250px;
     height: 310px;
     border-radius: 5px;
-    margin-top: 150px;
-    margin-left: 6.5%;
-    position: fixed;
-    
+    position: relative;
 }
 #agendaContainer{
-    margin-top: 80px;
-    width: auto;
-    margin-left: 25%;
-    margin-right: 2.5%;
+    /*margin-left: 25%;
+    margin-right: 2.5%;*/
+    width: 900px;
 }
 #agendaTitulo{
     color: white;
@@ -451,7 +376,6 @@ footer{
     text-align: center;
     margin-bottom: 70px;
     width: auto;
-    
 }
 .card{
     background-color: rgb(0, 0, 0);
@@ -462,31 +386,339 @@ footer{
     color: rgba(255, 255, 255, 1);
     font-family: Martel;
 }
-
 .card-body,
 .a {
     color: rgb(255, 255, 255);
     font-family: Roboto, "Helvetica Neue", sans-serif
 }
-
-
-
-#horizontal{
+.card-img-top:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.card-img-top{
+    -webkit-transition: transform 0.5s ease;
+    -o-transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
+}
+/*--------------------------------------------------
+                    timeline
+--------------------------------------------------*/
+#timelineContent{
     position: relative;
-    margin-top: 80px;
-    width: 1200px;
-    height: auto;
-    color: rgb(1, 1, 1);
-    background-color: silver;
+    max-width: 100%;
+    width: 100%;
+    height:100%;
+    background-color:rgba(0, 0, 0, 0.85);
+    padding-bottom:calc( 100% / (var(--aspect-ratio)) );
+  }
+  #tesTL{
+      margin-top: 760px;
+      
+  }
+/*--------------------------------------------------
+                Informacoes 
+-------------------------------------------------- */
+#informacoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#textInfor{
+    color: white;
+    position: relative;
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 50px;
+    margin-top: 60px;
+    margin-bottom: 70px;  
+}
+#formInformacoes{
+    width: 400px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: justify;
+}
+#inputNome,
+#inputEmail,
+#inputAssunto,
+#inputMensagem,
+#placeholder{
+    background-color: transparent;
+    color: white;
+    font-family: 'Roboto', sans-serif;    
 }
 
 
 
 
+#menu ul li a{   
+    margin-right: 60px;
+    position: relative;
+    width: fit-content;
+}
+#menu ul li a:hover {
+    border-right:3px solid white;
+    border-left: 3px solid white;
+}
+#menu ul li a:active {
+    border-right:5px solid white;
+    border-left: 5px solid white;
+    background-color: rgb(53, 53, 53);
+}
+#menu ul li a:focus {
+    border-right:5px solid white;
+    border-left: 5px solid white;
+}
+#menu ul li a:visited{
+    border-right:5px solid white;
+    border-left: 5px solid white;
+}
+
+#date1{
+    color: white;
+    font-size: 40px;
+    border:2px solid #967440;
+    z-index: 5;
+    font-family: Martel;
+    font-style: normal;
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    width: 75px;
+    height: 60px;
+    margin-left: 15px;
+    margin-top: 15px;
+    padding-top: 19px;
+    -webkit-text-stroke: 0.5px rgb(145, 145, 145); /* width and color */
+}
+#date2{
+    color: white;
+    font-size: 10px;
+    border:2px solid #967440;
+    z-index: 5;
+    font-family: Martel;
+    font-style: normal;
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    width: 75px;
+    height: 40px;
+    margin-left: 15px;
+    margin-top: 72px;
+    padding-top: 7px;
+    -webkit-text-stroke: 0.5px rgb(255, 255, 255); /* width and color */
+}
+.efeitoBlack{
+    z-index: 6;
+    background-image: -webkit-linear-gradient(bottom rgb(0, 0, 0), rgba(96, 96, 96, 0));
+    background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(97, 97, 97, 0));
+  }
 
 
 
 
+  /*----------------------------------------------------
+                    Acervo
+  ----------------------------------------------------*/
+  #containerAcervo{
+    width: 100%;
+    max-width: 900px;
+    width: auto;
+}
+#fundoAcervo{
+    padding-top: 70px;
+    background-color:rgba(0, 0, 0, 0.85);
+}
+#btnBusca {
+    height: 38px;
+    background-color: rgb(148, 148, 148);
+    border-right:1px solid rgb(210, 210, 210);
+    border-top:1px solid rgb(210, 210, 210);
+    border-bottom:1px solid rgb(210, 210, 210);
+    border-left:1px solid rgb(255, 255, 255);
+}
+.dropdown{
+    margin-right: 20px;
+}
+#dropdownMenuButton {
+    font-size: 16px; 
+    padding-left: 44px; 
+    padding-top: 5.5px;
+    background-color: transparent;
+    border: transparent;
+    color: white;
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: 900;
+}
+#dropInicial{
+    margin-left: -40px;
+}
+#botaoDrop {
+    background-color: transparent;
+    border: transparent;
+    color: white;
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: 900;
+  }
+.btn:focus{
+    outline: none;
+    box-shadow: none;
+}
+.btn:active{
+    outline: none;
+    box-shadow: none;
+}
+.btn.btn-light.dropdown-toggle:focus{
+    border-radius: 0px;
+    outline: none;
+    box-shadow: 7px 0px 0px rgba(255, 255, 255, 0.3);   
+}
+.dropdown-menu{
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.dropdown-item{
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: 900;
+    color: white;
+}
+.dropdown-item:hover{
+    background-color: #967440;
+}
+#boxImg{
+    border-right: 5px solid rgba(215, 215, 215, 0);
+    display: block; 
+    height: 160px;
+    width:100%;
+    justify-content: center;
+    align-content: center;
+}
+#containerGallery{
+    margin-top: 40px;
+}
+#gallery_box{ 
+    position: relative;
+    align-items: center;    
+}
+#gallery_box_1,
+#gallery_box_4{
+    margin-left: -18px;
+}
+#gallery_box_3{
+    align-items: center;
+    
+}
+#gallery_box li{ 
+    width: 33.33333%;
+    display:inline-block;
+    overflow: hidden;
+    position: relative;
+    max-width: 100% ;
+    margin-right: auto;
+}
+#gallery_box li:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+#gallery_box li img{
+    -webkit-transition: transform 0.5s ease;
+    -o-transition: transform 0.5s ease;
+    transition: transform 0.5s ease;
+}
+#gallery_box li:nth-child(odd) .box_data{
+     background:rgba(0,0,0,0.17) 
+}
+#gallery_box .box_data{ 
+    position:absolute; 
+    color:#fff;
+}
+#textAcervo{
+    position: relative;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: justify;
+    text-indent: 50px;
+    line-height: 150%;
+    display: block;
+    align-items: center;
+    padding-top: 70px;
+    padding-bottom: 60px;
+}
+
+
+/*------------------------------------------------------------------
+                 VERIFICAR O QUE AFETA
+----------------------------------------------------------------*/
+
+.galeria {
+    align-items: center;
+    width: 100%;
+    height: 800px;   
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+  }
+.foto{
+    position: absolute;
+    align-items: center;
+    max-width:100%;
+    min-width: 100%;
+    max-height:700px;
+    min-height: 700px;
+    width: auto;
+    height: auto;
+    opacity: 0;
+    animation-name: animacao;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes animacao {
+    25%{
+      opacity: 1;
+      transform: scale(1.1,1.1); 
+    }
+    50%{
+      opacity: 0;
+    }
+  }
+.foto:nth-child(1){
+    }
+.foto:nth-child(2){
+      animation-delay: 5s;
+    }
+.foto:nth-child(3){
+    animation-delay: 10s;
+    }
+  .foto:nth-child(4){
+    animation-delay: 15s;
+    }
 
 
 
+
+/* ----------------------------------------------------
+        Elementos adicionais
+   ----------------------------------------------------*/
+
+   #toastr-container > div {
+    opacity: 1;
+}

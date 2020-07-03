@@ -13,6 +13,7 @@ import { TimelineElement } from './timeline-element';
 import { animate, keyframes, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
+  // tslint:disable-next-line: component-selector
   selector: 'horizontal-timeline',
   templateUrl: 'horizontal-timeline.component.html',
   styleUrls: ['horizontal-timeline.component.css'],
@@ -61,6 +62,8 @@ import { animate, keyframes, state, style, transition, trigger } from '@angular/
     ])
   ]
 })
+
+
 export class HorizontalTimelineComponent implements AfterViewInit {
   prevLinkInactive: boolean = true;
   nextLinkInactive: boolean = false;
@@ -111,9 +114,24 @@ export class HorizontalTimelineComponent implements AfterViewInit {
 
   @Input()
   set dateFormat(value: string) {
-    this._dateFormat = value;
+    this._dateFormat2 = value;
     this.initView();
   }
+
+
+  private _dateFormat2: string = 'yyyy';
+
+  get dateFormat2(): string {
+    return this._dateFormat2;
+  }
+
+  @Input()
+  set dateFormat2(value: string) {
+    this._dateFormat2 = value;
+    this.initView();
+  }
+
+
 
   private _disabled: boolean = false;
 
@@ -336,4 +354,5 @@ export class HorizontalTimelineComponent implements AfterViewInit {
       i++;
     }
   }
+
 }

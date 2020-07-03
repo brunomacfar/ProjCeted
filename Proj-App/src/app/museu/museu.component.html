@@ -1,31 +1,33 @@
-<div id="content">
-  <div id="containerMuseu">
-    <div class="container" id="museuContainer">
-      <h1 id="firstTitulo">Quem Somos</h1>
-      <p id="textGeral">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Id consectetur purus
-        ut faucibus pulvinar elementum integer enim neque. Facilisis mauris sit
-        amet massa vitae tortor condimentum. Sit amet consectetur adipiscing
-        elit pellentesque habitant morbi tristique. Mauris sit amet massa vitae
-        tortor condimentum lacinia. Aliquam faucibus purus in massa. Bibendum
-        neque egestas congue quisque egestas.
-      </p>
-      <p id="textGeral">
-        Sed cras ornare arcu dui vivamus arcu. Viverra mauris in aliquam sem
-        fringilla ut. Nec dui nunc mattis enim ut tellus. Quis varius quam
-        quisque id diam vel quam elementum. Orci eu lobortis elementum nibh
-        tellus molestie. Viverra nam libero justo laoreet sit amet cursus sit
-        amet. Elementum pulvinar etiam non quam. Facilisi morbi tempus iaculis
-        urna id volutpat lacus laoreet non. Et magnis dis parturient montes
-        nascetur ridiculus mus mauris vitae. Varius sit amet mattis vulputate
-        enim nulla aliquet porttitor lacus. Pharetra convallis posuere morbi leo
-        urna molestie. Sit amet porttitor eget dolor
-      </p>
-    </div>
 
-    <div class="container" id="videoPlayer">
-      <div class="embed-responsive embed-responsive-4by3" id="videoPlayer">
+
+
+
+<div class="content">
+  <div class="container" id="museuContainer">
+    <h1 id="firstTitulo">Quem Somos</h1>
+    <p id="textGeral">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Id consectetur purus
+      ut faucibus pulvinar elementum integer enim neque. Facilisis mauris sit
+      amet massa vitae tortor condimentum. Sit amet consectetur adipiscing elit
+      pellentesque habitant morbi tristique. Mauris sit amet massa vitae tortor
+      condimentum lacinia. Aliquam faucibus purus in massa. Bibendum neque
+      egestas congue quisque egestas.
+    </p>
+    <p id="textGeral">
+      Sed cras ornare arcu dui vivamus arcu. Viverra mauris in aliquam sem
+      fringilla ut. Nec dui nunc mattis enim ut tellus. Quis varius quam quisque
+      id diam vel quam elementum. Orci eu lobortis elementum nibh tellus
+      molestie. Viverra nam libero justo laoreet sit amet cursus sit amet.
+      Elementum pulvinar etiam non quam. Facilisi morbi tempus iaculis urna id
+      volutpat lacus laoreet non. Et magnis dis parturient montes nascetur
+      ridiculus mus mauris vitae. Varius sit amet mattis vulputate enim nulla
+      aliquet porttitor lacus. Pharetra convallis posuere morbi leo urna
+      molestie. Sit amet porttitor eget dolor
+    </p>
+    <!-- Embed Vídeo -->
+    <div id="videoPlayer">
+      <div class="embed-responsive embed-responsive-16by9">
         <iframe
           class="embed-responsive-item"
           src="https://www.youtube.com/embed/rPVUQMabgT4?rel=0"
@@ -33,8 +35,8 @@
         ></iframe>
       </div>
     </div>
-
-    <div class="container" id="museuContainer">
+    <!-- Historia  -->
+    <div>
       <h1 id="tituloMuseu">Nossa História</h1>
       <p id="textGeral">
         O Museu Nacional do Calçado (MNC) conserva a memória da atividade
@@ -54,11 +56,8 @@
         históricos e bancada de sapateiro, entre outras.
       </p>
     </div>
-    <!-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
-        AQUI COMEÇA O GALLERY IMAGE 
-    -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -->
-
-    <div class="container" id="galleyCont">
+    <!-- galeria -->
+    <div id="galleyCont">
       <gallery
         id="galleryGeral"
         fluid
@@ -68,10 +67,11 @@
           transform: translateX(0);
           left: 0;
         "
-      ></gallery>
+      >
+      </gallery>
     </div>
-
-    <div class="container" id="decreto">
+    <!-- Decreto -->
+    <div>
       <h1 id="tituloMuseu">Conheça o Decreto</h1>
       <div class="row">
         <div class="col-sm-9">
@@ -94,18 +94,23 @@
           </p>
         </div>
         <div class="col-sm-3" id="decretoIcon">
-          <img
-            src="/assets/_img/museuGallery/decreto.png"
+          <a
+            class="grow"
+            id="imgLink"
             href="https://leismunicipais.com.br/a/rs/n/novo-hamburgo/lei-ordinaria/1998/16/159/lei-ordinaria-n-159-1998-dispoe-sobre-a-distribuicao-de-panfletos-em-vias-publicas-e-da-outras-providencias/"
-            class="rounded"
-            id="museuDecretoIco"
-            alt="Logo Oficial"
-          />
+          >
+            <img
+              src="/assets/_img/museuGallery/decreto.png"
+              class="rounded"
+              id="museuDecretoIco"
+              alt="Logo Oficial"
+            />
+          </a>
         </div>
       </div>
     </div>
-
-    <div class="container" id="timeLine">
+    <!-- timeLine -->
+    <div>
       <div class="row">
         <div class="col-sm-5">
           <img
@@ -121,30 +126,25 @@
               A história do Museu<br />
               através dos anos
             </p>
-            <img
-              class="rounded"
-              id="tl02"
-              src="/assets/_img/museuGallery/acessoLinhaTempo.png"
-              routerLink="timeline"
-              alt="Linha do tempo"
-            />
+            <a class="grow" id="imgLink" href="/timeline">
+              <img
+                class="rounded"
+                id="tl02"
+                src="/assets/_img/museuGallery/acessoLinhaTempo.png"
+                alt="Linha do tempo"
+              />
+            </a>
           </div>
         </div>
-        <div id="container" id="tl03">
+        <!-- Imagem timeLine -->
+        <div>
           <img
-            id="tl04"
             src="/assets/_img/museuGallery/anoAano.png"
+            id="tl03"
             alt="Ano a Ano"
           />
         </div>
       </div>
     </div>
-    <div class="timeline">
-      <horizontal-timeline 
-              [timelineElements]="" 
-              [showContent]="true">
-    </horizontal-timeline>
-    </div>
-
   </div>
 </div>

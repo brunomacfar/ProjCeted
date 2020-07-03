@@ -11,7 +11,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MAT_MOMENT_DATE_FORMATS } from '@angular/material-moment-adapter';
 import { MomentDateAdapter, MatMomentDateModule } from '@angular/material-moment-adapter';
 import {MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
- import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
+import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE} from '@angular/material/core';
 
 
 
@@ -40,6 +40,8 @@ import { NavFooterComponent } from './navFooter/navFooter.component';
 import { MuseuComponent } from './museu/museu.component';
 import { HorizontalTimelineComponent } from './horizontal-timeline/horizontal-timeline.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { TimelineElement } from './horizontal-timeline/timeline-element';
+
 
 
 @NgModule({

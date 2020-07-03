@@ -1,3 +1,21 @@
-<p>
-  timeline works!
-</p>
+
+
+
+
+
+
+<div>
+  <div class="container" id="timelineContent">
+    <div *ngIf="timeline.length" class="container-fluid">
+      <div class="row d-flex justify-content-center">
+        <horizontal-timeline
+          [timelineElements]="timeline"
+          [showContent]="true"
+          [timelineWrapperWidth]="2000"
+        >
+        </horizontal-timeline>
+        <div id="tesTL"></div>
+      </div>
+    </div>
+  </div>
+</div>

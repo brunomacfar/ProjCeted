@@ -9,6 +9,7 @@ import { InformacoesComponent } from './informacoes/informacoes.component';
 import { InitNavComponent } from './initNav/initNav.component';
 import { MuseuComponent } from './museu/museu.component';
 import { HorizontalTimelineComponent } from './horizontal-timeline/horizontal-timeline.component';
+import { TimelineComponent } from './timeline/timeline.component';
 
 const routes: Routes = [
   { path: 'usuarioApp', component: UsuarioAppComponent},
@@ -19,7 +20,7 @@ const routes: Routes = [
   { path: 'noticias', component: NoticiasComponent},
   { path: 'informacoes', component: InformacoesComponent},
   { path: 'inicial', component: InitNavComponent},
-  { path: 'timeline', component: HorizontalTimelineComponent}
+  { path: 'timeline', component: TimelineComponent}
 
 ];
 

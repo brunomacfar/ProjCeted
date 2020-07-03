@@ -3,11 +3,12 @@ ol, ul {
 }
 
 .cd-horizontal-timeline {
+  left: 0;
   opacity: 0;
-  margin: 2em auto;
   -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;
   transition: opacity 0.2s;
+
 }
 
 .cd-horizontal-timeline::before {
@@ -19,14 +20,17 @@ ol, ul {
 .cd-horizontal-timeline.loaded {
   /* show the timeline after events position has been set (using JavaScript) */
   opacity: 1;
+  
 }
 
 .cd-horizontal-timeline .timeline {
   position: relative;
-  height: 100px;
-  width: 90%;
+  height: 120px;
+  width: 100%;
+  max-height: auto;
   max-width: 800px;
   margin: 0 auto;
+  margin-top: 100px;
 }
 
 .cd-horizontal-timeline .events-wrapper {
@@ -46,41 +50,29 @@ ol, ul {
   width: 20px;
 }
 
-.cd-horizontal-timeline .events-wrapper::before {
-  left: 0;
-  background-image: -webkit-linear-gradient(left, #fff, rgba(248, 248, 248, 0));
-  background-image: linear-gradient(to right, #fff, rgba(248, 248, 248, 0));
-}
-
-.cd-horizontal-timeline .events-wrapper::after {
-  right: 0;
-  background-image: -webkit-linear-gradient(right, #fff, rgba(248, 248, 248, 0));
-  background-image: linear-gradient(to left, #fff, rgba(248, 248, 248, 0));
-}
-
 .cd-horizontal-timeline .events {
-  /* this is the grey line/timeline */
+  /* this is the white line/timeline */
   position: absolute;
   z-index: 1;
   left: 0;
   top: 49px;
   height: 2px;
   /* width will be set using JavaScript */
-  background: #dfdfdf;
+  background: #ffffff;
   -webkit-transition: -webkit-transform 0.4s;
   -moz-transition: -moz-transform 0.4s;
   transition: transform 0.4s;
 }
 
 .cd-horizontal-timeline .filling-line {
-  /* this is used to create the green line filling the timeline */
+  /* this is used to create the White line filling the timeline */
   position: absolute;
   z-index: 1;
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: #7b9d6f;
+  background-color: #967440;
   -webkit-transform: scaleX(0);
   -moz-transform: scaleX(0);
   -ms-transform: scaleX(0);
@@ -100,11 +92,12 @@ ol, ul {
   position: absolute;
   bottom: 0;
   z-index: 2;
+  font-family: Martel;
   text-align: center;
-  font-size: 12px;
+  font-size: 17px;
   text-decoration: none;
   padding-bottom: 15px;
-  color: #383838;
+  color: #ffffff;
   /* fix bug on Safari - text flickering while timeline translates */
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -124,10 +117,10 @@ ol, ul {
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
-  bottom: -5px;
-  height: 8px;
-  width: 8px;
-  border-radius: 50%;
+  bottom: -7px;
+  height: 15px;
+  width: 15px;
+  border-radius: 100px;
   border: 2px solid #dfdfdf;
   background-color: #f8f8f8;
   -webkit-transition: background-color 0.3s, border-color 0.3s;
@@ -136,21 +129,26 @@ ol, ul {
 }
 
 .cd-horizontal-timeline .events a:hover::after {
-  background-color: #7b9d6f;
-  border-color: #7b9d6f;
+  background-color: white;
+  border-color: white;
 }
 
 .cd-horizontal-timeline .events a.selected {
   pointer-events: none;
+  
 }
 
 .cd-horizontal-timeline .events a.selected::after {
-  background-color: #7b9d6f;
-  border-color: #7b9d6f;
+  height: 20px;
+  width: 20px;
+  bottom: -8.5px;
+  background-color: #967440;
+  border-color: white;
+  
 }
 
 .cd-horizontal-timeline .events a.older-event::after {
-  border-color: #7b9d6f;
+  border-color: #967440;
 }
 
 @media only screen and (min-width: 1100px) {
@@ -165,6 +163,7 @@ ol, ul {
 }
 
 .cd-horizontal-timeline li span {
+  color: white;
   position: absolute;
   left: 1700px;
   bottom: -30px;
@@ -173,9 +172,10 @@ ol, ul {
 
 .cd-timeline-navigation a {
   /* these are the left/right arrows to navigate the timeline */
+  
   position: absolute;
-  z-index: 1;
-  top: 50%;
+  z-index: 6;
+  top: 41.5%;
   bottom: auto;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
@@ -185,7 +185,7 @@ ol, ul {
   height: 34px;
   width: 34px;
   border-radius: 50%;
-  border: 2px solid #dfdfdf;
+  border: 2px solid #ffffff;
   /* replace text with an icon */
   overflow: hidden;
   color: transparent;
@@ -211,7 +211,7 @@ ol, ul {
   -ms-transform: translateX(-50%) translateY(-50%);
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: url('/Proj-App/src/assets/_img/cd-arrow.svg') no-repeat 0 0;
+  background: url("/assets/_img/cd-arrow.svg") no-repeat 0 0;
 }
 
 .cd-timeline-navigation a.prev {
@@ -225,88 +225,123 @@ ol, ul {
 
 .cd-timeline-navigation a.next {
   right: 0;
+  color: #ffffff;
 }
 
 .cd-timeline-navigation a:hover {
-  border-color: #7b9d6f;
+  border-color: #967440;
+  border: 3px solid #967440;
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
 .cd-timeline-navigation a.inactive {
   cursor: not-allowed;
+  color: #ffffff;
 }
 
 .cd-timeline-navigation a.inactive::after {
   background-position: 0 -16px;
+  color: #ffffff;
 }
 
 .cd-timeline-navigation a.inactive:hover {
-  border-color: #dfdfdf;
+  border-color: #967440;
+  color: #ffffff;
 }
+
+/* Qtd em eventos  */
+
 
 .cd-horizontal-timeline .events-content {
   position: relative;
-  width: 100%;
-  margin: 2em 0;
-  overflow: hidden;
+  max-width: 100%;
+  max-height: 100%;
   -webkit-transition: height 0.4s;
   -moz-transition: height 0.4s;
-  transition: height 0.4s;
+  transition: height 0.4s;  
+  
 }
-
+.cd-horizontal-timeline .timelineLeft {
+  position: relative;
+  align-items: left;
+  align-content: left;
+}
 .cd-horizontal-timeline .events-content li {
   position: absolute;
+  overflow: hidden; 
   z-index: 1;
   width: 100%;
   left: 0;
   top: 0;
   padding: 0 5%;
   opacity: 0;
+  text-align: justify;
 }
-
 .cd-horizontal-timeline .events-content li > * {
   max-width: 800px;
-  margin: 0 auto;
+  margin-left: 1px;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 400px;
 }
 
 .cd-horizontal-timeline .events-content h2 {
+  padding-top: 90px;
+  padding-bottom: 50px;
   font-weight: bold;
-  font-size: 2.6rem;
   line-height: 1.2;
+  color: #ffffff;
 }
 
 .cd-horizontal-timeline .events-content em {
   display: block;
   font-style: italic;
   margin: 10px auto;
+  color: white;
 }
-
 .cd-horizontal-timeline .events-content em::before {
   content: '- ';
 }
-
 .cd-horizontal-timeline .events-content p {
-  font-size: 1.4rem;
-  color: #959595;
+  
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 150%;
+  color: #fff;
+  letter-spacing: 0.015em;
 }
-
 .cd-horizontal-timeline .events-content em, .cd-horizontal-timeline .events-content p {
   line-height: 1.6;
 }
-
 @media only screen and (min-width: 768px) {
   .cd-horizontal-timeline .events-content h2 {
-    font-size: 7rem;
+    font-size: 40px;;
   }
-
   .cd-horizontal-timeline .events-content em {
-    font-size: 2rem;
+    font-size: 16px;
+    ;
   }
-
   .cd-horizontal-timeline .events-content p {
-    font-size: 1.8rem;
+    font-size: 18px;;
+  }
+  .ng-tns-c138-1{
+    color: #ffffff;
   }
 }
 
 
-
-/**                     */
+.cd-horizontal-timeline{
+  background-image: url('/assets/_img/timeline/timeline1.png');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  width: 100%;
+  
+}
+.efeito{
+  background-image: -webkit-linear-gradient(left, rgb(0, 0, 0), rgba(96, 96, 96, 0));
+  background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(97, 97, 97, 0));
+}

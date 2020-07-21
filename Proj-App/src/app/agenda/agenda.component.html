@@ -1,108 +1,71 @@
-<div class="content">
-  
-  <div class="container" id="agendaContainer">
-    <h1 id="agendaTitulo">Agenda de Exposições e Eventos</h1>
-
-
-
-    <div class="row col-lg">
-      <div class="col-4">
-        <mat-calendar id="agendaT"> </mat-calendar>
+<div class="content" >
+  <div class="container" id="agendaContainer" >
+    <h1 id="firstTitulo">
+      Agenda de Exposições e Eventos
+    </h1>
+    <div class="row">
+      <div class="col">
+        <mat-calendar id="calendario"
+        [selected]="selectedDate" (selectedChange)="onSelect($event)"
+        > </mat-calendar>
       </div>
 
-      <div class="col-4">
-        <div class="card">
-          <a id="date1">05</a>
-          <a id="date2">Segunda-Feira</a>
-          <a href="#">
+      <div class="ted">
+        <div class="card-wrap">
+          <h3 id="date1">20</h3>
+          <h3 id="date2">Quinta</h3>
+          <h2 id="agendaTitulo">
+            20 Anos do Museu
+          </h2>
           <img
-            class="card-img-top"
-            src="/assets/_img/agenda/card2.jpg"
+            class="imgAgenda"
+            src="/assets/_img/agenda/card1.jpg"
             alt="Card image cap"
           />
-            </a>
-          <div class="card-body">
-            
-              <h2 class="card-title">Exposição 1</h2>
-            
-            <p class="card-text">
+          <div class="img-overlay"></div>
+          
+          <div id="size__card">
+            <p class="recuo" id="cardBody">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Id
               consectetur purus ut faucibus pulvinar elementum integer enim
-              neque.
+              neque. Facilisis mauris sit amet massa vitae tortor condimentum.
+              Sit amet consectetur adipiscing elit pellentesque habitant morbi
+              tristique. Mauris sit amet massa vitae tortor condimentum lacinia.
+              Aliquam faucibus purus in massa
             </p>
           </div>
         </div>
       </div>
-      <div class="col-4">
-        <div class="card">
-          <a id="date1">12</a>
-          <a id="date2">Terça-Feira</a>
-          <a class="grow" id="imgLink" href="#">
+
+      <div class="ted">       
+        <div class="card-wrap">
+          <h3 id="date1">31</h3>
+          <h3 id="date2">Sexta</h3>
+          <h2 id="agendaTitulo">
+            20 Anos do Museu
+          </h2>
           <img
-            class="card-img-top"
-            src="/assets/_img/agenda/card1.jpg"
-            alt="Card image cap"/>
-          </a>
-          <div class="card-body">
-           
-              <h2 class="card-title">Exposição 2</h2>
-            
-            <p class="card-text">
-              "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-6">
-        <div class="card">
-          <a id="date1">30</a>
-          <a id="date2">Quinta-Feira</a>
-          <a href="#">
-          <img
-            class="card-img-top"
-            src="/assets/_img/agenda/card1.jpg"
-            alt="Card image cap"/>
-            </a>
-          <div class="card-body">
-              <h2 class="card-title">Exposição 3</h2>
-            <p class="card-text">
-              "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-6">
-        <div class="card">
-          <a id="date1">30</a>
-          <a id="date2">Quinta-Feira</a>
-          <a href="#">
-          <img
-            class="card-img-top"
+            class="imgAgenda"
             src="/assets/_img/agenda/card2.jpg"
-            alt="Card image cap"/>
-            </a>
-          <div class="card-body">
-              <h2 class="card-title">Exposição 3</h2>
-            <p class="card-text">
-              "Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-              aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-              eos qui ratione voluptatem sequi nesciunt.
+            alt="Card image cap"
+          />
+          <div class="img-overlay"></div>
+          <div id="size__card">
+            <p class="recuo" id="cardBody">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+          quae ab illo inventore veritatis et quasi architecto beatae vitae
+          dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+          eos qui ratione voluptatem sequi nesciunt.
             </p>
           </div>
         </div>
       </div>
+
+
+
     </div>
   </div>
 </div>

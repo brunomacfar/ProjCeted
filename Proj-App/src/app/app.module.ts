@@ -35,6 +35,8 @@ import { AcervoComponent } from './acervo/acervo.component';
 import { AgendaComponent } from './agenda/agenda.component';
 import { NoticiasComponent } from './noticias/noticias.component';
 import { InformacoesComponent } from './informacoes/informacoes.component';
+import { EventoComponent } from './evento/evento.component';
+
 
 import { NavFooterComponent } from './navFooter/navFooter.component';
 import { MuseuComponent } from './museu/museu.component';
@@ -47,7 +49,7 @@ import { TimelineElement } from './horizontal-timeline/timeline-element';
 @NgModule({
    declarations: [
       AppComponent,
-      NavComponent,
+      // NavComponent,
       InitNavComponent,
       DashboardComponent,
       UsuarioAppComponent,
@@ -58,7 +60,8 @@ import { TimelineElement } from './horizontal-timeline/timeline-element';
       NavFooterComponent,
       MuseuComponent,
       HorizontalTimelineComponent,
-      TimelineComponent
+      TimelineComponent,
+      EventoComponent
    ],
    imports: [
       BrowserModule,

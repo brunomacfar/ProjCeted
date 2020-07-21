@@ -11,6 +11,12 @@ body{
     background-size: cover;
     background-color: black;
 }
+.recuo { text-indent: 3em }
+
+/* ----------------------------------------
+            PRE-Load Stuff
+----------------------------------------*/
+
 /* ----------------------------------------
             Loader Stuff
 ----------------------------------------*/
@@ -352,57 +358,169 @@ footer{
 /* ----------------------------------------------------
         Agenda
    ----------------------------------------------------*/
-#agendaT{
+#calendario{
     background-color: rgba(182, 182, 182, 0.3);
     color: rgb(255, 255, 255);
     width: 250px;
     height: 310px;
     border-radius: 5px;
     position: relative;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 0px;
+}
+
+.mat-calendar-table-header th {
+    text-align: center;
+    padding: 0 0 0 0;    
+    border: 1px solid white;
+}
+.mat-calendar-table-header-divider::after{
+    padding: 0 0 0 0;    
+}
+td{
+    border: 1px solid white;
+}
+.mat-calendar-table-header{
+    color: white;
+}
+.mat-calendar-body-label{
+    color: white;
+    text-align: center;
+}
+.mat-calendar-body-cell-content{
+    color: white;
+  /*  border: 1px solid white; */
+}
+.mat-calendar-body-today.mat-calendar-body-selected{
+    background-color:  #967440;
+}
+.mat-calendar-body-today:not(.mat-calendar-body-selected){
+    border: 2px solid #967440;
+    color: white;
+}
+.mat-calendar-body-selected{
+    background-color:  #967440;
 }
 #agendaContainer{
     /*margin-left: 25%;
     margin-right: 2.5%;*/
-    width: 900px;
+    width: 1100px;
+}
+.ted{
+    width: 387px;
+    max-width: 100%;
+    overflow: hidden;
+    height: 100%;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+.card-wrap {
+    border: 0.1px solid rgba(255, 255, 255, 0.023);
+    width: 387px;
+    position: relative;
+    overflow: hidden;
+}
+.card-wrap img {
+    z-index: 1;
 }
 #agendaTitulo{
-    color: white;
-    position: relative;
-    font-family: Merriweather;
-    font-style: normal;
-    font-size: 40px;
-    line-height: 50px;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 70px;
-    width: auto;
-}
-.card{
-    background-color: rgb(0, 0, 0);
-    border-color: rgba(0, 0, 0, 0);
-    margin-bottom: 28px;
-}
-.card-title {
-    color: rgba(255, 255, 255, 1);
     font-family: Martel;
+    color: white;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 110%;
+    /* or 44px */
+    text-align: justify;
+    position: absolute;
+    overflow: hidden;
+    z-index: 4;
+    margin-top: 205px;
+    margin-left: 10px;
 }
-.card-body,
-.a {
+#date1{
+    color: white;
+    font-size: 40px;
+    border:2px solid #967440;
+    z-index: 6;
+    font-family: Martel;
+    font-style: normal;
+    position: absolute;
+    text-align: center;
+    align-content: center;
+    width: 65px;
+    height: 40px;
+    margin-left: 15px;
+    margin-top: 14px;
+    padding-top: 4px;
+    -webkit-text-stroke: 1px rgb(255, 255, 255); /* width and color */
+}
+#date2{
+    color: white;
+    font-size: 17px;
+    border:2px solid #967440;
+    z-index: 6;
+    font-family: Martel;
+    font-style: normal;
+    position: absolute;
+    text-align: center;
+    width: 65px;
+    height: 33px;
+    margin-left: 15px;
+    margin-top: 52px;
+    -webkit-text-stroke: 0.5px rgb(255, 255, 255); /* width and color */
+}
+#cardBody {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.064);
     color: rgb(255, 255, 255);
-    font-family: Roboto, "Helvetica Neue", sans-serif
+    z-index: 4;  
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: justify;
+    padding-top: 30px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;   
 }
-.card-img-top:hover {
+#size__card{
+    margin: 10px;
+}
+.img-overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 23%, rgba(0,0,0,1) 29%, rgba(0,0,0,1) 36%, rgba(0,0,0,1) 43%, rgba(0,0,0,1) 52%, rgba(0,0,0,1) 63%, rgba(0,0,0,0.30155812324929976) 80%, rgba(0,0,0,0) 98%);
+    z-index: 3;
+}
+.imgAgenda{
+    z-index: 1;
+    display: inline-block;
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.5s ease;
+}
+.imgAgenda:hover{
+    z-index: 6;
     -moz-transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
     -o-transform: scale(1.1);
     transform: scale(1.1);
 }
-.card-img-top{
-    -webkit-transition: transform 0.5s ease;
-    -o-transition: transform 0.5s ease;
-    transition: transform 0.5s ease;
-}
+
+
+
+
+
+
+
+
 /*--------------------------------------------------
                     timeline
 --------------------------------------------------*/
@@ -482,186 +600,20 @@ footer{
     border-right:5px solid white;
     border-left: 5px solid white;
 }
-
-#date1{
-    color: white;
-    font-size: 40px;
-    border:2px solid #967440;
-    z-index: 5;
-    font-family: Martel;
-    font-style: normal;
-    position: absolute;
-    text-align: center;
-    align-content: center;
-    width: 75px;
-    height: 60px;
-    margin-left: 15px;
-    margin-top: 15px;
-    padding-top: 19px;
-    -webkit-text-stroke: 0.5px rgb(145, 145, 145); /* width and color */
-}
-#date2{
-    color: white;
-    font-size: 10px;
-    border:2px solid #967440;
-    z-index: 5;
-    font-family: Martel;
-    font-style: normal;
-    position: absolute;
-    text-align: center;
-    align-content: center;
-    width: 75px;
-    height: 40px;
-    margin-left: 15px;
-    margin-top: 72px;
-    padding-top: 7px;
-    -webkit-text-stroke: 0.5px rgb(255, 255, 255); /* width and color */
-}
 .efeitoBlack{
     z-index: 6;
     background-image: -webkit-linear-gradient(bottom rgb(0, 0, 0), rgba(96, 96, 96, 0));
     background-image: linear-gradient(to top, rgb(0, 0, 0), rgba(97, 97, 97, 0));
   }
-
-
-
-
   /*----------------------------------------------------
                     Acervo
   ----------------------------------------------------*/
-  #containerAcervo{
-    width: 100%;
-    max-width: 900px;
-    width: auto;
-}
-#fundoAcervo{
-    padding-top: 70px;
-    background-color:rgba(0, 0, 0, 0.85);
-}
-#btnBusca {
-    height: 38px;
-    background-color: rgb(148, 148, 148);
-    border-right:1px solid rgb(210, 210, 210);
-    border-top:1px solid rgb(210, 210, 210);
-    border-bottom:1px solid rgb(210, 210, 210);
-    border-left:1px solid rgb(255, 255, 255);
-}
-.dropdown{
-    margin-right: 20px;
-}
-#dropdownMenuButton {
-    font-size: 16px; 
-    padding-left: 44px; 
-    padding-top: 5.5px;
-    background-color: transparent;
-    border: transparent;
-    color: white;
-    font-family: Merriweather;
-    font-style: normal;
-    font-weight: 900;
-}
-#dropInicial{
-    margin-left: -40px;
-}
-#botaoDrop {
-    background-color: transparent;
-    border: transparent;
-    color: white;
-    font-family: Merriweather;
-    font-style: normal;
-    font-weight: 900;
-  }
-.btn:focus{
-    outline: none;
-    box-shadow: none;
-}
-.btn:active{
-    outline: none;
-    box-shadow: none;
-}
-.btn.btn-light.dropdown-toggle:focus{
-    border-radius: 0px;
-    outline: none;
-    box-shadow: 7px 0px 0px rgba(255, 255, 255, 0.3);   
-}
-.dropdown-menu{
-    background-color: rgba(255, 255, 255, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-}
-.dropdown-item{
-    font-family: Merriweather;
-    font-style: normal;
-    font-weight: 900;
-    color: white;
-}
-.dropdown-item:hover{
-    background-color: #967440;
-}
-#boxImg{
-    border-right: 5px solid rgba(215, 215, 215, 0);
-    display: block; 
-    height: 160px;
-    width:100%;
-    justify-content: center;
-    align-content: center;
-}
-#containerGallery{
-    margin-top: 40px;
-}
-#gallery_box{ 
-    position: relative;
-    align-items: center;    
-}
-#gallery_box_1,
-#gallery_box_4{
-    margin-left: -18px;
-}
-#gallery_box_3{
-    align-items: center;
-    
-}
-#gallery_box li{ 
-    width: 33.33333%;
-    display:inline-block;
-    overflow: hidden;
-    position: relative;
-    max-width: 100% ;
-    margin-right: auto;
-}
-#gallery_box li:hover img {
-    -moz-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
-}
-#gallery_box li img{
-    -webkit-transition: transform 0.5s ease;
-    -o-transition: transform 0.5s ease;
-    transition: transform 0.5s ease;
-}
-#gallery_box li:nth-child(odd) .box_data{
-     background:rgba(0,0,0,0.17) 
-}
-#gallery_box .box_data{ 
-    position:absolute; 
-    color:#fff;
-}
-#textAcervo{
-    position: relative;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    text-align: justify;
-    text-indent: 50px;
-    line-height: 150%;
-    display: block;
-    align-items: center;
-    padding-top: 70px;
-    padding-bottom: 60px;
-}
+  
+
+
+
+
+
 
 
 /*------------------------------------------------------------------
@@ -722,3 +674,18 @@ footer{
    #toastr-container > div {
     opacity: 1;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

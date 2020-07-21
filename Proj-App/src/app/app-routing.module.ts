@@ -10,12 +10,15 @@ import { InitNavComponent } from './initNav/initNav.component';
 import { MuseuComponent } from './museu/museu.component';
 import { HorizontalTimelineComponent } from './horizontal-timeline/horizontal-timeline.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { EventoComponent } from './evento/evento.component';
 
 const routes: Routes = [
+  { path: '', component: InitNavComponent},
   { path: 'usuarioApp', component: UsuarioAppComponent},
   { path: 'museu', component: MuseuComponent},
   { path: 'dashboard', component: DashboardComponent},
   { path: 'agenda', component: AgendaComponent},
+  { path: 'evento', component: EventoComponent },
   { path: 'acervo', component: AcervoComponent},
   { path: 'noticias', component: NoticiasComponent},
   { path: 'informacoes', component: InformacoesComponent},

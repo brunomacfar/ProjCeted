@@ -49,7 +49,7 @@ import { TimelineElement } from './horizontal-timeline/timeline-element';
 @NgModule({
    declarations: [
       AppComponent,
-      // NavComponent,
+      NavComponent,
       InitNavComponent,
       DashboardComponent,
       UsuarioAppComponent,

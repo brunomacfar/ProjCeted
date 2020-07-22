@@ -1,5 +1,7 @@
+
 import { Component, OnInit } from '@angular/core';
-import { NavbarService } from '../_services/navbar.service';
+import { DeactivateComponent } from '../_guards/navbar-deactivate.guard';
+
 
 
 @Component({
@@ -7,7 +9,15 @@ import { NavbarService } from '../_services/navbar.service';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css']
 })
-export class NavComponent {
-  constructor( public nav: NavbarService) {}
+export class NavComponent implements OnInit, DeactivateComponent {
+  isDeactivated = true;
+  constructor() { }
 
+  ngOnInit() {
+  }
+
+  deactivateComponent(){
+    
+    return this.isDeactivated;
+  }
 }

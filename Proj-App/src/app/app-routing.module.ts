@@ -11,9 +11,12 @@ import { MuseuComponent } from './museu/museu.component';
 import { HorizontalTimelineComponent } from './horizontal-timeline/horizontal-timeline.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { EventoComponent } from './evento/evento.component';
+import { NavbarDeactivateGuard } from './_guards/navbar-deactivate.guard';
 
 const routes: Routes = [
-  { path: '', component: InitNavComponent},
+  { path: 'init', component: InitNavComponent,
+          canDeactivate: [NavbarDeactivateGuard]
+  },
   { path: 'usuarioApp', component: UsuarioAppComponent},
   { path: 'museu', component: MuseuComponent},
   { path: 'dashboard', component: DashboardComponent},

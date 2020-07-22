@@ -3,7 +3,7 @@ import { Gallery, GalleryItem, ImageItem, ThumbnailsPosition, ImageSize, Thumbna
 import { Lightbox } from 'ng-gallery/lightbox';
 import { map } from 'rxjs/operators';
 import { HorizontalTimelineComponent } from '../horizontal-timeline/horizontal-timeline.component';
-import { NavbarService } from "../_services/navbar.service";
+
 
 @Component({
   selector: 'app-museu',
@@ -14,7 +14,6 @@ import { NavbarService } from "../_services/navbar.service";
 export class MuseuComponent implements OnInit {
 
   items: GalleryItem[];
-  
   imageData = data;
 
   constructor(public gallery: Gallery,
@@ -23,8 +22,6 @@ export class MuseuComponent implements OnInit {
                 ) { }
 
   ngOnInit() {
-    
-      
     /** Basic Gallery Example */
 
 

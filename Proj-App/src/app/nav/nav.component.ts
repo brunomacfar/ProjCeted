@@ -1,6 +1,8 @@
 
 import { Component, OnInit } from '@angular/core';
 import { DeactivateComponent } from '../_guards/navbar-deactivate.guard';
+import { NavService } from '../_services/nav.service';
+import { Router } from '@angular/router';
 
 
 
@@ -9,15 +11,11 @@ import { DeactivateComponent } from '../_guards/navbar-deactivate.guard';
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.css']
 })
-export class NavComponent implements OnInit, DeactivateComponent {
-  isDeactivated = true;
-  constructor() { }
-
+export class NavComponent implements OnInit{
+ 
+  constructor( public nav: NavService,
+               public router: Router) { }
   ngOnInit() {
   }
 
-  deactivateComponent(){
-    
-    return this.isDeactivated;
-  }
 }

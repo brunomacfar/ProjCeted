@@ -3,6 +3,7 @@ import { Gallery, GalleryItem, ImageItem, ThumbnailsPosition, ImageSize, Thumbna
 import { Lightbox } from 'ng-gallery/lightbox';
 import { map } from 'rxjs/operators';
 import { HorizontalTimelineComponent } from '../horizontal-timeline/horizontal-timeline.component';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -18,13 +19,12 @@ export class MuseuComponent implements OnInit {
 
   constructor(public gallery: Gallery,
               public lightbox: Lightbox,
+              public router: Router
 
                 ) { }
 
   ngOnInit() {
     /** Basic Gallery Example */
-
-
     // Creat gallery items
     this.items = this.imageData.map(item => new ImageItem({ src: item.srcUrl, thumb: item.previewUrl }));
 

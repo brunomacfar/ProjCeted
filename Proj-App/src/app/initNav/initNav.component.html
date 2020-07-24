@@ -1,67 +1,18 @@
-<ng-sidebar-container style="height: 100vh;">
-	<!-- A sidebar -->
-  <ng-sidebar [(opened)]="_opened"
-              [(dock)]="_dock" 
-              [dockedSize]="'55px'"
-              [closeOnClickOutside]="_closeOnClickOutside"
-              [animate]="_animate"
-              position="right">
-    <!-- Icone necessário para abrir o sidebar -->
-      
-      <div class="container" id="initSide" >
-			<p>
-        <a class="nav-link" id="fontSidebar" routerLink="museu"> O Museu</a>
-      </p>
-      <p>
-        <a class="nav-link" id="fontSidebar" routerLink="acervo"> Acervo</a>
-      </p>
-      <p>
-        <a class="nav-link" id="fontSidebar" routerLink="agenda"> Agenda </a>
-      </p>
-      <p>
-        <a class="nav-link" id="fontSidebar" routerLink="noticia"> Notícias</a>
-      </p>
-      <p>
-        <a class="nav-link" id="fontSidebar" routerLink="informacoes"> Informações</a>
-      </p>
-		</div>
-  </ng-sidebar>
-  <!-- Page content 
-    Botão de socorro para problemas com o sidebar
-	<div ng-sidebar-content>
-		<button (click)="_toggleSidebar()">Toggle sidebar</button>
-		<p>
-			Start editing to see some magic happen :)
-		</p>
-	</div>
--->
-  <div ng-sidebar-content>
-    <section class="galeria">
-    <div class="container" id="dockProprio">
-      <i class="fa fa-bars fa-2x" id="initFa" aria-hidden="false" (click)="_toggleSidebar()"></i> 
-    </div>
-   
-    <img class="foto" src="/assets/_img/inicial/Inicial1.jpg">
-    <img class="foto" src="/assets/_img/inicial/Inicial2.jpg">
-    <img class="foto" src="/assets/_img/inicial/Inicial3.jpg">
-    <img class="foto" src="/assets/_img/inicial/Inicial4.jpg">
-
-
-    <!-- <carousel [isAnimated]="true">
-      <slide>
-        <img src="/assets/_img/inicial/Inicial1.jpg" alt="first slide" style="display: block; width: 100%;">
-      </slide>
-      <slide>
-        <img src="/assets/_img/inicial/Inicial2.jpg" alt="second slide" style="display: block; width: 100%;">
-      </slide>
-      <slide>
-        <img src="/assets/_img/inicial/Inicial3.jpg" alt="third slide" style="display: block; width: 100%;">
-      </slide>
-      <slide>
-        <img src="/assets/_img/inicial/Inicial4.jpg" alt="third slide"  style="display: block; width: 100%;">
-      </slide>
-    </carousel> -->
-  </section>
-  </div>
-
-</ng-sidebar-container>
+<nav class="navbar">
+  <ul class="nav flex-column">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="museu"> O Museu</a>  </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="acervo"> Acervo</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="agenda"> Agenda </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="noticias"> Notícias</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="informacoes">Informações</a>
+    </li>
+  </ul>
+</nav>

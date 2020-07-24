@@ -14,9 +14,7 @@ import { EventoComponent } from './evento/evento.component';
 import { NavbarDeactivateGuard } from './_guards/navbar-deactivate.guard';
 
 const routes: Routes = [
-  { path: 'init', component: InitNavComponent,
-          canDeactivate: [NavbarDeactivateGuard]
-  },
+  { path: '', component: InitNavComponent},
   { path: 'usuarioApp', component: UsuarioAppComponent},
   { path: 'museu', component: MuseuComponent},
   { path: 'dashboard', component: DashboardComponent},
@@ -25,7 +23,6 @@ const routes: Routes = [
   { path: 'acervo', component: AcervoComponent},
   { path: 'noticias', component: NoticiasComponent},
   { path: 'informacoes', component: InformacoesComponent},
-  { path: 'inicial', component: InitNavComponent},
   { path: 'timeline', component: TimelineComponent}
 
 ];

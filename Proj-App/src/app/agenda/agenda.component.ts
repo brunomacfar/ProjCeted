@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavService } from '../_services/nav.service';
 
 @Component({
   selector: 'app-agenda',
@@ -11,11 +12,12 @@ export class AgendaComponent implements OnInit {
 
   selectedDate: any;
 
-  constructor() {  }
+  constructor(public nav: NavService) {  }
 
 
 
   ngOnInit() {
+    this.nav.show();
   }
 
   onSelect(event){

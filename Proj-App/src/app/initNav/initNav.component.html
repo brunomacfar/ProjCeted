@@ -1,18 +1,30 @@
-<nav class="navbar">
-  <ul class="nav flex-column">
-    <li class="nav-item">
-      <a class="nav-link" routerLink="museu"> O Museu</a>  </li>
-    <li class="nav-item">
+<section class="galeria">
+  <img class="foto" src="/assets/_img/inicial/Inicial1.jpg" />
+  <img class="foto" src="/assets/_img/inicial/Inicial2.jpg" />
+  <img class="foto" src="/assets/_img/inicial/Inicial3.jpg" />
+  <img class="foto" src="/assets/_img/inicial/Inicial4.jpg" />
+</section>
+
+
+<div id="mySidenav" class="sidenav">
+  <!-- botao que controla a abertura/fechamento sidenav(verificar conteudo typescrypt para funcionamento) -->
+  <button (click)="clickMe()" id="initFa2" class="fas fa-bars fa-3x"></button>
+
+  <ul class="nav flex-column right" id="initNav">
+    <li class="nav-item" id="sideItem" id="sideItem">
+      <a class="nav-link" routerLink="museu"> O Museu</a>
+    </li>
+    <li class="nav-item" id="sideItem">
       <a class="nav-link" routerLink="acervo"> Acervo</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" id="sideItem">
       <a class="nav-link" routerLink="agenda"> Agenda </a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" id="sideItem">
       <a class="nav-link" routerLink="noticias"> Notícias</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item" id="sideItem">
       <a class="nav-link" routerLink="informacoes">Informações</a>
     </li>
   </ul>
-</nav>
+</div>

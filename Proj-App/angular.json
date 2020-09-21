@@ -27,7 +27,9 @@
               "src/custom-theme.scss",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/1js/main.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -92,7 +94,9 @@
               "src/styles.css",
               "node_modules/ngx-toastr/toastr.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/1js/main.js"
+            ]
           }
         },
         "lint": {

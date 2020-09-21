@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NavService } from '../_services/nav.service';
+import { HttpClient, JsonpInterceptor } from "@angular/common/http";
 
 @Component({
   selector: 'app-evento',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./evento.component.css']
 })
 export class EventoComponent implements OnInit {
+  projects = [];
 
-  constructor() { }
+  constructor(private nav: NavService,
+    private http: HttpClient) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
-
 }

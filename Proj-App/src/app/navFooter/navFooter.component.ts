@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NavService } from '../_services/nav.service';
 
 @Component({
   selector: 'app-navFooter',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavFooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router: Router,
+              public nav: NavService) { }
 
   ngOnInit() {
+    
   }
 
 }

@@ -1,177 +1,176 @@
-
-
-
-
-
-
-
 #containerAcervo{
     width: 100%;
     max-width: 900px;
-    width: auto;
 }
+
 #fundoAcervo{
     padding-top: 70px;
     background-color:rgba(0, 0, 0, 0.85);
 }
-.navbar a{
-    color: white;
-    font-size: 18px;
-    font-family: Merriweather;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 150%;
-    align-items: center;
-    transition-duration: 0.5s;
-}
-.nav-item a{
-    text-align: center;
-    display: inline-table;
-    width: 160px;
-}
-.nav-item a:hover{  
-    transition-duration: 0.7s;
-    background: #96744066;
-
-}
-.nav-item a:focus-within{
-    transition-duration: 0.7s;
-    background: rgba(0, 0, 0, 0.85);
-    color: #967440;
-}
-.dropdown-menu{
-    border: none;
-    border-radius: 0px;
-    background-color: rgba(0, 0, 0, 0.85);
-    transition-duration: 0.5s;
-    margin: 0px;
-    align-items: center;
-}
-.dropdown-menu a:hover{
-    color: #967440;
-    background: rgba(116, 116, 116, 0.31);
-    transition-duration: 0.6s;
-    width: 100%;
-}
-.navbar-collapse.collapse { 
-    margin: 0px;
-    height: 100%;
-    width: 100% 
-}
-.dropdown-menu.show {
-    text-align: center;
-}
 
 
-
-
-
-
-/*--------*/
-
-
-#boxImg{
-    border-right: 5px solid rgba(215, 215, 215, 0);
-    display: block; 
-    height: 160px;
-    width:100%;
-    justify-content: center;
-    align-content: center;
-}
-#containerGallery{
-    margin-top: 40px;
-}
-#gallery_box{ 
-    position: relative;
-    align-items: center;    
-}
-#gallery_box_1,
-#gallery_box_4{
+nav{
     margin-left: -18px;
+    padding-bottom: 40px;
+
 }
-#gallery_box_3{
-    align-items: center;
-    
+.acervoMenu{
+    position: absolute;
+    list-style:none;
+    float:left;
+    width: 900px;
+    max-width: 1200px;
 }
-#gallery_box li{ 
-    width: 33.33333%;
-    display:inline-block;
-    overflow: hidden;
-    position: relative;
-    max-width: 100% ;
-    margin-right: auto;
+#itemAlign{
+    margin-top: 6px;
 }
-#gallery_box li:hover img {
-    -moz-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
+.itemFiltroAcervo{
+    color: white; 
+    margin-top: 8px;
 }
-#gallery_box li img{
-    -webkit-transition: transform 0.5s ease;
-    -o-transition: transform 0.5s ease;
-    transition: transform 0.5s ease;
+.acervoMenu li{
+    position:relative;
+    float:left;
+    height: 100%;
+    width: auto;   
 }
-#gallery_box li:nth-child(odd) .box_data{
-     background:rgba(0,0,0,0.17) 
+.alinhaMenu{
+    position: absolute;
+    height: 50px;
+    width: 900px;  
+    background-color: rgba(0,0,0,0.45);
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    padding-top: 7px;
+    padding-left:15px;
+
 }
-#gallery_box .box_data{ 
-    position:absolute; 
-    color:rgba(174, 174, 174, 0.495);
-}
-#textAcervo{
-    position: relative;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    text-align: justify;
-    text-indent: 50px;
-    line-height: 150%;
+
+.acervoMenu li a,  p {
+    color:white; 
+    text-decoration:none; 
+    padding: 5px 15px; 
     display: block;
-    align-items: center;
-    padding-top: 70px;
-    padding-bottom: 60px;
+    font-family: 'Merriweather', serif;
+    font-size: 22px;
+    height: 32px; 
+    letter-spacing: 2px;
+
 }
 
-.form-control {
+.acervoMenu li a:hover{
+    color:#967440;
+    text-shadow:0px 0px 5px #967440;  
     background-color: transparent;
-    border: 1px solid rgba(174, 174, 174, 0.495);
-    border-radius: 0;
-    color: white;
+    box-shadow: 1px 0px 399px -31px rgba(150,116,64,0.75);
+    -webkit-box-shadow: 1px 0px 399px -31px rgba(150,116,64,0.75);
+    -moz-box-shadow: 1px 0px 399px -31px rgba(150,116,64,0.75);
+}
+.acervoMenu li a:focus-within{
+    color:#967440;
+    text-shadow:0px 0px 5px #967440;
     
 }
-.form-control[_ngcontent-rsu-c135] {
-    color: white;
+.acervoMenu li  ul{
+    position:absolute;
+    top:40px;
+    background-color:transparent;
+    display:none;  
+    margin-top: -5px;
 }
 
-.btn-success {
-    color: #fff;
-    border-radius: 0;
-    background-color: rgba(174, 174, 174, 0.495); ;
-    border-color: rgba(174, 174, 174, 0.495);
-}
-.btn-success:active{
-    box-shadow: #967440;
-    color: #967440;
-}
-.btn-success:hover{
-    box-shadow: #967440;
-    color: #967440;
-}
-.btn-success::selection{
-    box-shadow: #967440;
-    color: #967440;
+.acervoMenu li:hover ul, .acervoMenu li.over ul{
+    display:block;
+    border: 0 transparent;
 }
 
-#btnBusca {
-    height: 38px;
-    background-color: transparent;
-    border-right:1px solid rgba(174, 174, 174, 0.495);
-    border-top:1px solid rgba(174, 174, 174, 0.495);
-    border-bottom:1px solid rgba(174, 174, 174, 0.495);
+.acervoMenu li ul li{
+    background-color: rgba(0, 0, 0, 0.55);
+    display: block;
+    width: 100%;
+    border: 0 transparent;   
+    left: 8px; 
+}
+.acervoMenu li ul li a{
+    font-size: 18px;
+    text-align: left;
+}
+#data{
+    width: 80px;
+    padding-right: 40px;
+    
+}
+#itemData{
+    margin-left:-18px;
+}
+
+.dataAcervo{
+    margin-left: -23px;
+}
+.paisAcervo{
+    margin-left: -12px;
+}
+.modeloAcervo{
+    margin-right: 15px;
+    margin-left: -15px;
+}
+
+
+
+
+    
+
+    .form-control {
+        background-color: transparent;  
+        color: white;
+        width: 300px;
+        border-radius: 0;
+        border-left: 2px solid #96744094;
+        border-top: 2px solid #96744094;
+        border-bottom: 2px solid #96744094;
+        border-right: transparent;
+        
+    }
+    .form-control[_ngcontent-rsu-c135] {
+        color: white;
+    }
+    
+    .btn-success {
+        color: #fff;
+        border-radius: 0;
+        background-color: rgba(174, 174, 174, 0.495); ;
+        border-color: rgba(174, 174, 174, 0.495);
+    }
+    .btn-success:active{
+        box-shadow: #967440;
+        color: #967440;
+    }
+    .btn-success:hover{
+        box-shadow: #967440;
+        color: #967440;
+    }
+    .btn-success::selection{
+        box-shadow: #967440;
+        color: #967440;
+    }
+    #btnBusca {
+        width: 38px;
+        height: 38px;
+        background-color: transparent;
+        border-right: 2px solid #96744094;
+        border-top: 2px solid #96744094;
+        border-bottom: 2px solid #96744094;
+        border-left: 2px solid #96744094;
+    }
+    input[type=text] {
+        color: white;
+      }
+input:focus{
+    outline: none !important;
+    border:1px solid white;
+    box-shadow: 0 0 10px #967440;
 }
 
 
@@ -182,19 +181,102 @@
 
 
 
+.gallery{
+    padding-top: 25px;
+    padding-bottom: 25px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 7vw);
+    row-gap: 0px;
+    column-gap: 15px;
+}
 
+.gallery__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
+.gallery__item--1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.gallery__item--2 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2.5;
+}
+.gallery__item--3 {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.gallery__item--4 {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
 
+.gallery__item--5 {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
 
+.gallery__item--6 {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
 
+.gallery__item--7 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
 
+.gallery__item--8 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
 
+.gallery__item--9 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
 
+.gallery__item--10 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
 
+.gallery__item--11 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
 
-
-
-
-
-
-
+.gallery__item--12 {
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 3;
+    grid-row-end: 5;
+}
+#finalAcervo{
+    padding-bottom: 45px;
+}

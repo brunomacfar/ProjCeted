@@ -8,26 +8,24 @@
         <mat-calendar id="calendario" [selected]="selectedDate" (selectedChange)="onSelect($event)"> </mat-calendar>
       </div>
 
-      <div class="ted">
+
+      <div *ngFor="let eventoApp of eventosApp">    
+      <div class="ted" >
         <div class="card-wrap">
-          <h3 id="date1">20</h3>
+          <h3 id="date1"></h3>
           <h3 id="date2">Quinta</h3>
-          <a class="agendaTitulo" routerLink="/evento">  Título 1 </a>
+          <a class="agendaTitulo" routerLink="/evento">  </a>
           <img class="imgAgenda" src="/assets/_img/agenda/card1.jpg" alt="Card image cap" />
           <div class="img-overlay"></div>
           <div id="size__card">
             <p class="recuo" id="cardBody">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Id
-              consectetur purus ut faucibus pulvinar elementum integer enim
-              neque. Facilisis mauris sit amet massa vitae tortor condimentum.
-              Sit amet consectetur adipiscing elit pellentesque habitant morbi
-              tristique. Mauris sit amet massa vitae tortor condimentum lacinia.
-              Aliquam faucibus purus in massa
+             
             </p>
           </div>
         </div>
       </div>
+    </div>
+
 
       <div class="ted">
         <div class="card-wrap">

@@ -13,6 +13,10 @@ namespace ProjRepositorio
         Task<Usuario[]> GetAllUsuariosAsync();
         Task<Usuario[]> GetAllUsuariosAsyncByNome(string nome);
         Task<Usuario> GetAllUsuariosAsyncById(int id);
-        
+
+/*
+        Aqui começa MNC CONFIGS
+*/
+        Task<wp_db_evento[]> GetAllEventosAsync();
     }
 }

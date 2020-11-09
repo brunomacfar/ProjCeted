@@ -19,7 +19,7 @@ export class UsuarioAppComponent implements OnInit {
   _filtroLista: string;
   usuariosFiltrados: Usuario[];
   usuariosApp: Usuario[];
-  usuarioApp: Usuario;
+  usuarioApp: Usuario;    //utilizado para filtragem e  sinlge
   modoSalvar = 'put';
   bodyDeletarUsuario = '';
 

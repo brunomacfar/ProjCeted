@@ -1,8 +1,11 @@
+using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using ProjDominio;
 using ProjRepositorio;
+
 
 namespace ProjRepositorio
 {
@@ -31,6 +34,13 @@ namespace ProjRepositorio
             _context.Remove(entity);
         }
         
+
+    /*  -------------------!!!-------------------!!!-------------------
+
+            AQUI COMEÇAM AS CONFIGURAÇÕES PARA O USUARIOS!
+
+        -------------------!!!-------------------!!!-------------------  
+    */
         public async Task<Usuario[]> GetAllUsuariosAsync()
         {
             IQueryable<Usuario> query = _context.Usuarios; 
@@ -57,5 +67,28 @@ namespace ProjRepositorio
 
             return await query.ToArrayAsync();
         }
+    /*  -------------------!!!-------------------!!!-------------------
+
+            AQUI COMEÇAM AS CONFIGURAÇÕES PARA O MUSEU NACIONAL DO CALÇADO!
+
+        -------------------!!!-------------------!!!-------------------  
+     
+     
+                            EVENTOS
+     */
+       public async Task<wp_db_evento[]> GetAllEventosAsync()
+        {
+            IQueryable<wp_db_evento> query = _context.wp_db_evento;
+                query = query.OrderByDescending(c => c.id);
+                         
+            return await query.ToArrayAsync();
+        }
+       
+
+
+        
+
+
+
     }
 }

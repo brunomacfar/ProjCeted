@@ -14,7 +14,7 @@ import { NavComponent } from './nav/nav.component';
 import { NavFooterComponent } from './navFooter/navFooter.component';
 
 const routes: Routes = [
-  { path: '', component: AcervoComponent },
+  { path: '', component: NoticiasComponent },
   { path: 'museu', component: MuseuComponent},
   { path: 'timeline', component: TimelineComponent},  
   { path: 'agenda',component: AgendaComponent},

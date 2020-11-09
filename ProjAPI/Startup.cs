@@ -30,13 +30,13 @@ namespace ProjAPI
         public void ConfigureServices(IServiceCollection services)
         {
            services.AddDbContext<ProjCetedContext>(
-               c => c.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+               c => c.UseMySql(Configuration.GetConnectionString("DefaultConnection"), providerOptions => providerOptions.EnableRetryOnFailure() ));
            services.AddScoped<IProjRepositorio, RepositorioProj>();  
            services.AddControllers().AddNewtonsoftJson(); 
            services.AddCors();
            services.AddAutoMapper();
 
-            }
+        }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

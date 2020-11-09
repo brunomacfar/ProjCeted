@@ -39,8 +39,7 @@ namespace ProjAPI.Controllers
             }
             catch (System.Exception ex)
             {
-                string teste = " estouu /n/n/nn/  \n \n \n \n ";
-                return this.StatusCode(StatusCodes.Status500InternalServerError, teste);
+                return this.StatusCode(StatusCodes.Status500InternalServerError, ex );
             }
         }
 

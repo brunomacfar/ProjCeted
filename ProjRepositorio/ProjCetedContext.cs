@@ -13,7 +13,7 @@ namespace ProjRepositorio
         public DbSet<MuseuLink> MuseuLinks { get; set; }
         public DbSet<MuseuQuemSomo> MuseuQuemSomos { get; set; }
 
-        public DbSet<wp_db_evento> wp_db_evento { get; set; }
+        public DbSet<Evento> Evento { get; set; }
 
         
 

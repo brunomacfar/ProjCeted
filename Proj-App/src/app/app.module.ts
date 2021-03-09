@@ -8,6 +8,10 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 
 
+import { registerLocaleData } from '@angular/common';
+import localeBr from '@angular/common/locales/pt';
+import { LOCALE_ID } from "@angular/core";
+
 import { MAT_MOMENT_DATE_FORMATS } from '@angular/material-moment-adapter';
 import { MomentDateAdapter, MatMomentDateModule } from '@angular/material-moment-adapter';
 import {MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
@@ -22,9 +26,11 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 import { SidebarModule } from 'ng-sidebar';
 import { GalleryModule } from 'ng-gallery';
 import { LightboxModule } from 'ng-gallery/lightbox';
- 
+
+
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
+registerLocaleData(localeBr);
 
 
 @NgModule({
@@ -50,13 +56,14 @@ import { AppComponent } from './app.component';
       GalleryModule,
       LightboxModule,
       MatDatepickerModule,
-      MatNativeDateModule
-      
+      MatNativeDateModule      
    ],
    providers: [
+      { provide: LOCALE_ID, useValue: 'pt-BR' },
       MatDatepickerModule,
       MatNativeDateModule,
       MatMomentDateModule
+      
    ],
    bootstrap: [
       AppComponent

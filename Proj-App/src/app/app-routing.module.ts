@@ -14,7 +14,7 @@ import { NavComponent } from './nav/nav.component';
 import { NavFooterComponent } from './navFooter/navFooter.component';
 
 const routes: Routes = [
-  { path: '', component: NoticiasComponent },
+  { path: 'home', component: InitNavComponent },
   { path: 'museu', component: MuseuComponent},
   { path: 'timeline', component: TimelineComponent},  
   { path: 'agenda',component: AgendaComponent},
@@ -22,7 +22,9 @@ const routes: Routes = [
   { path: 'acervo', component: AcervoComponent},
   { path: 'noticias', component: NoticiasComponent},
   { path: 'informacoes', component: InformacoesComponent},
-  { path: 'usuarioApp', component: UsuarioAppComponent}
+  { path: 'usuarioApp', component: UsuarioAppComponent},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', redirectTo: 'home', pathMatch: 'full' }
   
 ];
 

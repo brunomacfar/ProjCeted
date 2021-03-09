@@ -23,7 +23,7 @@ export class EventoComponent implements OnInit {
   }
 
   getEventosApp(){
-    this.eventoService.getEventos().subscribe(
+    this.eventoService.getAllEventos().subscribe(
       (_eventos: Evento[]) => {
         this.eventosApp = _eventos;
       }, error => {

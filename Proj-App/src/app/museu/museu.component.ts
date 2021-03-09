@@ -51,23 +51,23 @@ export class MuseuComponent implements OnInit {
 
 const data = [
   {
-    srcUrl: '/assets/_img/museuGallery/img1.png',
-    previewUrl: '/assets/_img/museuGallery/img1.png'
+    srcUrl: 'assets/_img/museuGallery/img1.png',
+    previewUrl: 'assets/_img/museuGallery/img1.png'
   },
   {
-    srcUrl: '/assets/_img/museuGallery/img2.png',
-    previewUrl: '/assets/_img/museuGallery/img2.png'
+    srcUrl: 'assets/_img/museuGallery/img2.png',
+    previewUrl: 'assets/_img/museuGallery/img2.png'
   },
   {
-    srcUrl: '/assets/_img/museuGallery/img3.png',
-    previewUrl: '/assets/_img/museuGallery/img3.png'
+    srcUrl: 'assets/_img/museuGallery/img3.png',
+    previewUrl: 'assets/_img/museuGallery/img3.png'
   },
   {
-    srcUrl: '/assets/_img/museuGallery/img4.png',
-    previewUrl: '/assets/_img/museuGallery/img4.png'
+    srcUrl: 'assets/_img/museuGallery/img4.png',
+    previewUrl: 'assets/_img/museuGallery/img4.png'
   },
   {
-    srcUrl: '/assets/_img/museuGallery/img5.png',
-    previewUrl: '/assets/_img/museuGallery/img5.png'
+    srcUrl: 'assets/_img/museuGallery/img5.png',
+    previewUrl: 'assets/_img/museuGallery/img5.png'
   }
 ];

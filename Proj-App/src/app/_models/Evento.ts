@@ -2,9 +2,9 @@ export interface Evento{
     id: number;
     titulo: string;
     descricao: string;
-    horaAbre: string;
-    horaFecha: string;
-    dataIni: string;
+    horaAbertura: string;
+    horaEncerramento: string;
+    dataInicio: string;
     dataFim: string;
     endereco: string;
     arquivo: string;

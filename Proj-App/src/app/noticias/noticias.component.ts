@@ -1,7 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { BrowserModule } from "@angular/platform-browser"; 
-import { HttpClient } from "@angular/common/http";
-import { NavService } from '../_services/nav.service';
+import { Evento } from '../_models/Evento';
+import { EventoService } from '../_services/evento.service';
+import { FormBuilder } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
+
+
+
 
 @Component({
   selector: 'app-noticias',
@@ -10,20 +14,26 @@ import { NavService } from '../_services/nav.service';
 })
 export class NoticiasComponent implements OnInit {
 
-  projects = [];
- 
-  constructor(private http: HttpClient,
-              private nav: NavService) { }
+  titulo = 'Eventos';
+  eventos: Evento[];
+  evento: Evento;
 
-  ngOnInit() :void {
-    this.nav.hide(); 
-    this.http.get('http://ceted.feevale.br/museudocalcado/?rest_route=/wp/v2/posts/&slug=conheca-o-decreto').subscribe(data => {
-        for(let key in data){
-          if(data.hasOwnProperty(key)){
-            this.projects.push(data[key]);
-          }
-        }
-        console.log(this.projects)
-    })
+  constructor( private eventoService: EventoService
+             , private fb: FormBuilder
+             , private toastr: ToastrService) { }
+
+  ngOnInit() {
+    this.getEventos();
+  }
+
+  getEventos() {
+    
+    this.eventoService.getAllEventos().subscribe(
+      (_eventos: Evento[]) => {
+        this.eventos = _eventos;
+        console.log(this.eventos);
+      }, error => {
+        this.toastr.error(`Erro ao tentar Carregar eventos: ${error}`);
+      });
   }
 }

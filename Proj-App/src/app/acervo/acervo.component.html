@@ -1,137 +1,143 @@
 <div class="content">
-  <div class="container">
-    <h2 id="firstTitulo">Mais de 25 Mil Calçados</h2>
-    <div class="container" id="containerAcervo">
-      
-      <nav>
-        <ul class="acervoMenu" >
-          <div class="alinhaMenu">
-            <li class="itemFiltroAcervo" id=itemAlign>
-              <i class="fas fa-filter fas-2x" > </i>
-            </li>
-            <li>
-              <p>Filtros:</p>
-            </li>
-          
-          
-          <li class="dataAcervo"  ><a href="#">Data<i class="fas fa-angle-down"></i></a>
-            <ul class="dropdown-menu" id="data">
-              <li class="dropdown-item"id="data"><a id="itemData">1980</a></li>
-              <li class="dropdown-item"id="data"><a id="itemData">1990</a></li>
-              <li class="dropdown-item"id="data"><a id="itemData">2000</a></li>
-            </ul>
-          </li>
-          
-          
-          <li class="paisAcervo"><a href="#">País de Origem<i class="fas fa-angle-down" ></i></a>
-            <ul class="dropdown-menu">
-              <li class="dropdown-item"><a>Brasil</a></li>
-              <li class="dropdown-item"><a>Itália</a></li>
-              <li class="dropdown-item"><a>China</a></li>
-            </ul>
-          </li>
-         
-         
-          <li class="modeloAcervo"><a href="#">Modelos<i class="fas fa-angle-down" ></i></a> 
-            <ul class="dropdown-menu">
-              <li class="dropdown-item"><a href="#">Web Design</a></li>
-              <li class="dropdown-item"><a href="#">SEO</a></li>
-              <li class="dropdown-item"><a href="#">Design</a></li>
-            </ul>
-          </li>
-         
-         
-          <li>
-            <input type="text" class="form-control" placeholder="Digite sua busca"/>
-          </li>
-          <li>
-            <button class="btn btn-success" id="btnBusca" type="submit">
-              <i class="fas fa-search fa-sm" id="acervoPesquisa"></i>
-            </button> 
-          </li>
+<div class="faixa">
+ 
+    <div class="container">
+      <h2 id="firstTituloA">Mais de 25 Mil Calçados</h2>
+      <div class="container" id="containerAcervo">
+
+        <nav>
+          <ul class="acervoMenu">
+            <div class="alinhaMenu">
+              <li class="itemFiltroAcervo" id=itemAlign>
+                <i class="fas fa-filter fas-2x"> </i>
+              </li>
+              <li>
+                <p>Filtros:</p>
+              </li>
+
+
+              <li class="dataAcervo"><a href="#">Data<i class="fas fa-angle-down"></i></a>
+                <ul class="dropdown-menu" id="data">
+                  <li class="dropdown-item" id="data"><a id="itemData">1980</a></li>
+                  <li class="dropdown-item" id="data"><a id="itemData">1990</a></li>
+                  <li class="dropdown-item" id="data"><a id="itemData">2000</a></li>
+                </ul>
+              </li>
+
+
+              <li class="paisAcervo"><a href="#">País de Origem<i class="fas fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-item"><a>Brasil</a></li>
+                  <li class="dropdown-item"><a>Itália</a></li>
+                  <li class="dropdown-item"><a>China</a></li>
+                </ul>
+              </li>
+
+
+              <li class="modeloAcervo"><a href="#">Modelos<i class="fas fa-angle-down"></i></a>
+                <ul class="dropdown-menu">
+                  <li class="dropdown-item"><a href="#">Web Design</a></li>
+                  <li class="dropdown-item"><a href="#">SEO</a></li>
+                  <li class="dropdown-item"><a href="#">Design</a></li>
+                </ul>
+              </li>
+
+
+              <li>
+                <input type="text" class="form-control" placeholder="Digite sua busca" />
+              </li>
+              <li>
+                <button class="btn btn-success" id="btnBusca" type="submit">
+                  <i class="fas fa-search fa-sm" id="acervoPesquisa"></i>
+                </button>
+              </li>
+
+            </div>
+          </ul>
+        </nav>
+
+        <!-- src="/assets/acervo/img1.jpg" 
+            Para debugar, 
+      -->
+
+        <div class="container">
+          <div class="gallery">
+            <figure class="gallery__item gallery__item--1" routerLinkActive="active" id="imgLink">
+              <a routerLink="/evento"><img src="assets/acervo/img1.jpg" class="gallery__img" alt="Image 1" /></a>
+            </figure>
+            <figure class="gallery__item gallery__item--2" id="imgLink">
+              <a routerLink="/evento"><img src="assets/acervo/img2.jpeg" class="gallery__img" alt="Image 2" /></a>
+            </figure>
+            <figure class="gallery__item gallery__item--3" id="imgLink">
+              <a routerLink="/evento"><img src="assets/acervo/img3.jpg" class="gallery__img" alt="Image 3" /></a>
+            </figure>
+            <figure class="gallery__item gallery__item--4" id="imgLink">
+              <a routerLink="/evento"><img src="assets/acervo/img4.jpg" class="gallery__img" alt="Image 4" /></a>
+            </figure>
+            <figure class="gallery__item gallery__item--5" id="imgLink">
+              <a routerLink="/evento"><img src="assets/acervo/img5.jpg" class="gallery__img" alt="Image 5" /></a>
+            </figure>
+            <figure class="gallery__item gallery__item--6" id="imgLink">
+              <a routerLink="/evento"><img src="assets/acervo/img6.jpg" class="gallery__img" alt="Image 6" /></a>
+            </figure>
+            <figure class="gallery__item gallery__item--7" id="imgLink">
+              <a routerLink="/evento"><img src="assets/acervo/img7.jpg" class="gallery__img" alt="Image 1" /></a>
+            </figure>
+            <figure class="gallery__item gallery__item--8" id="imgLink">
+              <a routerLink="/evento"><img src="assets/acervo/img8.jpg" class="gallery__img" alt="Image 2" /></a>
+            </figure>
+            <figure class="gallery__item gallery__item--9" id="imgLink">
+              <a routerLink="/evento"><img src="assets/acervo/img9.jpg" class="gallery__img" alt="Image 3" /></a>
+            </figure>
+            <figure class="gallery__item gallery__item--10" id="imgLink">
+              <a routerLink="/evento"><img src="assets/acervo/img10.jpg" class="gallery__img" alt="Image 4" /></a>
+            </figure>
+            <figure class="gallery__item gallery__item--11" id="imgLink">
+              <a routerLink="/evento"><img src="assets/acervo/img11.jpg" class="gallery__img" alt="Image 5" /></a>
+            </figure>
+            <figure class="gallery__item gallery__item--12" id="imgLink">
+              <a routerLink="/evento"><img src="assets/acervo/img12.jpg" class="gallery__img" alt="Image 6" /></a>
+            </figure>
+            <figure class="gallery__item gallery__item--13" id="imgLink">
+              <a routerLink="/evento"><img src="assets/acervo/img12.jpg" class="gallery__img" alt="Image 6" /></a>
+            </figure>
+            <figure class="gallery__item gallery__item--14" id="imgLink">
+              <a routerLink="/evento"><img src="assets/acervo/img12.jpg" class="gallery__img" alt="Image 6" /></a>
+            </figure>
+            <figure class="gallery__item gallery__item--15" id="imgLink">
+              <a routerLink="/evento"><img src="assets/acervo/img12.jpg" class="gallery__img" alt="Image 6" /></a>
+            </figure>
+            <figure class="gallery__item gallery__item--16" id="imgLink">
+              <a routerLink="/evento"><img src="assets/acervo/img12.jpg" class="gallery__img" alt="Image 6" /></a>
+            </figure>
+            <figure class="gallery__item gallery__item--17" id="imgLink">
+              <a routerLink="/evento"><img src="assets/acervo/img12.jpg" class="gallery__img" alt="Image 6" /></a>
+            </figure>
+            <figure class="gallery__item gallery__item--18" id="imgLink">
+              <a routerLink="/evento"><img src="assets/acervo/img12.jpg" class="gallery__img" alt="Image 6" /></a>
+            </figure>
 
           </div>
-        </ul>
-      </nav>
-
-
-      <div class="container">
-        <div class="gallery">
-          <figure class="gallery__item gallery__item--1"  routerLinkActive="active" id="imgLink" >
-            <a routerLink="/evento"><img src="/assets/acervo/img1.jpg"  class="gallery__img"   alt="Image 1" /></a>
-          </figure>
-          <figure class="gallery__item gallery__item--2" id="imgLink">
-            <a routerLink="/evento"><img src="/assets/acervo/img2.jpeg" class="gallery__img" alt="Image 2" /></a>
-          </figure>
-          <figure class="gallery__item gallery__item--3" id="imgLink">
-            <a routerLink="/evento"><img src="/assets/acervo/img3.jpg" class="gallery__img" alt="Image 3" /></a>
-          </figure>
-          <figure class="gallery__item gallery__item--4" id="imgLink">
-            <a routerLink="/evento"><img src="/assets/acervo/img4.jpg" class="gallery__img" alt="Image 4" /></a>
-          </figure>
-          <figure class="gallery__item gallery__item--5" id="imgLink">
-            <a routerLink="/evento"><img src="/assets/acervo/img5.jpg" class="gallery__img" alt="Image 5" /></a>
-          </figure>
-          <figure class="gallery__item gallery__item--6" id="imgLink">
-            <a routerLink="/evento"><img src="/assets/acervo/img6.jpg" class="gallery__img" alt="Image 6" /></a>
-          </figure>
-          <figure class="gallery__item gallery__item--7" id="imgLink">
-            <a routerLink="/evento"><img src="/assets/acervo/img7.jpg" class="gallery__img" alt="Image 1" /></a>
-          </figure>
-          <figure class="gallery__item gallery__item--8" id="imgLink">
-            <a routerLink="/evento"><img src="/assets/acervo/img8.jpg" class="gallery__img" alt="Image 2" /></a>
-          </figure>
-          <figure class="gallery__item gallery__item--9" id="imgLink">
-            <a routerLink="/evento"><img src="/assets/acervo/img9.jpg" class="gallery__img" alt="Image 3" /></a>
-          </figure>
-          <figure class="gallery__item gallery__item--10" id="imgLink">
-            <a routerLink="/evento"><img src="/assets/acervo/img10.jpg" class="gallery__img" alt="Image 4" /></a>
-          </figure>
-          <figure class="gallery__item gallery__item--11" id="imgLink">
-            <a routerLink="/evento"><img src="/assets/acervo/img11.jpg" class="gallery__img" alt="Image 5" /></a>
-          </figure>
-          <figure class="gallery__item gallery__item--12" id="imgLink">
-            <a routerLink="/evento"><img src="/assets/acervo/img12.jpg" class="gallery__img" alt="Image 6" /></a>
-          </figure>
-          <figure class="gallery__item gallery__item--13" id="imgLink">
-            <a routerLink="/evento"><img src="/assets/acervo/img12.jpg" class="gallery__img" alt="Image 6" /></a>
-          </figure>
-          <figure class="gallery__item gallery__item--14" id="imgLink">
-            <a routerLink="/evento"><img src="/assets/acervo/img12.jpg" class="gallery__img" alt="Image 6" /></a>
-          </figure>
-          <figure class="gallery__item gallery__item--15" id="imgLink">
-            <a routerLink="/evento"><img src="/assets/acervo/img12.jpg" class="gallery__img" alt="Image 6" /></a>
-          </figure>
-          <figure class="gallery__item gallery__item--16" id="imgLink">
-            <a routerLink="/evento"><img src="/assets/acervo/img12.jpg" class="gallery__img" alt="Image 6" /></a>
-          </figure>
-          <figure class="gallery__item gallery__item--17" id="imgLink">
-            <a routerLink="/evento"><img src="/assets/acervo/img12.jpg" class="gallery__img" alt="Image 6" /></a>
-          </figure>
-          <figure class="gallery__item gallery__item--18" id="imgLink">
-            <a routerLink="/evento"><img src="/assets/acervo/img12.jpg" class="gallery__img" alt="Image 6" /></a>
-          </figure>
-          
         </div>
+
+
+        <div class="container" id="finalAcervo">
+          <a id="textGeral">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Id
+            consectetur purus ut faucibus pulvinar elementum integer enim neque.
+            Facilisis mauris sit amet massa vitae tortor condimentum. Sit amet
+            consectetur adipiscing elit pellentesque habitant morbi tristique.
+            Mauris sit amet massa vitae tortor condimentum lacinia. Aliquam
+            faucibus purus in massa. Bibendum neque egestas congue quisque
+            egestas.
+          </a>
+        </div>
+
+
+
       </div>
-
-
-      <div class="container" id="finalAcervo">
-        <a id="textGeral">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Id
-          consectetur purus ut faucibus pulvinar elementum integer enim neque.
-          Facilisis mauris sit amet massa vitae tortor condimentum. Sit amet
-          consectetur adipiscing elit pellentesque habitant morbi tristique.
-          Mauris sit amet massa vitae tortor condimentum lacinia. Aliquam
-          faucibus purus in massa. Bibendum neque egestas congue quisque
-          egestas.
-        </a>
-      </div>
-
-
 
     </div>
-
   </div>
 </div>

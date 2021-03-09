@@ -76,19 +76,26 @@ namespace ProjRepositorio
      
                             EVENTOS
      */
-       public async Task<wp_db_evento[]> GetAllEventosAsync()
+       public async Task<Evento[]> GetAllEventosAsync()
         {
-            IQueryable<wp_db_evento> query = _context.wp_db_evento;
+            IQueryable<Evento> query = _context.Evento;
                 query = query.OrderByDescending(c => c.id);
                          
             return await query.ToArrayAsync();
         }
-       
 
+         public async Task<Evento[]> GetAllEventoAsyncByTitulo(string Titulo)
+        {
+            IQueryable<Evento> query = _context.Evento;
 
-        
-
+                query = query.AsNoTracking()
+                        .Where(t => t.titulo.ToLower().Contains(Titulo.ToLower()));
+                         
+            return await query.ToArrayAsync();
+        } 
+    
 
 
     }
+    
 }

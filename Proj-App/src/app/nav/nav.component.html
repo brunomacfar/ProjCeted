@@ -1,23 +1,24 @@
 
 <nav *ngIf="nav.visible" class="navbar navbar-expand fixed-top"  id="nav-main">  
-  <img src="/assets/_img/logoBrancoOficial.png" class="rounded float-left" id="logoOficial" alt="Logo Oficial">
+  <a class="nav-link " routerLink="iniNav">
+    <img src="assets/_img/logoBrancoOficial.png" class="rounded float-left"  id="logoOficial" alt="Logo Oficial">
+  </a>
+  <div class="container" >
   
-  <div class="container" id="menu">
-  
-    <ul class="navbar-nav mx-auto ">
-        <li class="nav-item" routerLinkActive="active">
-          <a class="nav-link" id="nav-font" routerLink="museu" routerLinkActive="selected" > O Museu</a>
+    <ul class="navbar-nav navbar-expand mx-auto ">
+        <li class="nav-item"  id="menu" routerLinkActive="active" >
+          <a class="nav-link" id="nav-font" routerLink="museu" routerLinkActive="selected"> O Museu</a>
         </li>
-        <li class="nav-item" routerLinkActive="active">
+        <li class="nav-item"  id="menu" routerLinkActive="active">
           <a class="nav-link" id="nav-font" routerLink="acervo" routerLinkActive="selected"> Acervo</a>
         </li>
-        <li class="nav-item" routerLinkActive="active">
+        <li class="nav-item"  id="menu" routerLinkActive="active">
           <a class="nav-link" id="nav-font" routerLink="agenda" routerLinkActive="selected"> Agenda </a>
         </li>
-        <li class="nav-item" routerLinkActive="active">
+        <li class="nav-item"  id="menu" routerLinkActive="active">
           <a class="nav-link" id="nav-font" routerLink="noticias" routerLinkActive="selected"> Notícias</a>
         </li>
-        <li class="nav-item" routerLinkActive="active">
+        <li class="nav-item"  id="menu" routerLinkActive="active">
           <a class="nav-link" id="nav-font" routerLink="informacoes" routerLinkActive="selected"> Informações</a>
         </li>
 <!--        <li class="nav-item dropdown" dropdown>

@@ -30,9 +30,14 @@
     "ng-gallery": "^5.0.0-beta.2",
     "ng-sidebar": "^9.3.0",
     "ngx-bootstrap": "^5.6.1",
+    "ngx-horizontal-timeline": "^0.0.6",
     "ngx-toastr": "^12.1.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-horizontal-timeline": "^1.4.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
+    "yargs": "^15.3.0",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
@@ -47,7 +52,7 @@
     "codelyzer": "^5.1.2",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
-    "jquery": "^1.9.1",
+    "jquery": "^3.5.1",
     "karma": "~5.0.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage-istanbul-reporter": "~2.1.0",

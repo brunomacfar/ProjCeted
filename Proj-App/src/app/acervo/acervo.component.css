@@ -36,7 +36,6 @@
     position: absolute;
     height: 50px;
     width: 900px;
-    background-color: rgba(0, 0, 0, 0.45);
     top: 50%;
     left: 50%;
     margin-right: -50%;
@@ -84,7 +83,7 @@
   }
   
   .acervoMenu li ul li {
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: rgba(0, 0, 0, 0.95);
     display: block;
     width: 100%;
     border: 0 transparent;
@@ -188,6 +187,7 @@
   }
 
   .gallery {
+    margin-top: 30px;
     padding-bottom: 25px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -287,6 +287,7 @@
     grid-row-end: 5;
   }
   #finalAcervo {
+    padding-top: 45px;
     padding-bottom: 45px;
   }
   

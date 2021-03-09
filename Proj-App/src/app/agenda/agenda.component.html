@@ -3,49 +3,45 @@
     <h1 id="firstTitulo">
       Agenda de Exposições e Eventos
     </h1>
-    <div class="row">
-      <div class="col">
-        <mat-calendar id="calendario" [selected]="selectedDate" (selectedChange)="onSelect($event)"> </mat-calendar>
-      </div>
-
-
-      <div *ngFor="let eventoApp of eventosApp">    
-      <div class="ted" >
-        <div class="card-wrap">
-          <h3 id="date1"></h3>
-          <h3 id="date2">Quinta</h3>
-          <a class="agendaTitulo" routerLink="/evento">  </a>
-          <img class="imgAgenda" src="/assets/_img/agenda/card1.jpg" alt="Card image cap" />
-          <div class="img-overlay"></div>
-          <div id="size__card">
-            <p class="recuo" id="cardBody">
-             
-            </p>
+    <div class="row" id="agendaID">
+      <div class="col-sm">      
+          <mat-calendar id="calendario"  [selected]="selectedDate" (selectedChange)="onSelect($event)"> </mat-calendar>
+      </div>  
+      
+      <!-- <div *ngFor="let eventoApp of eventosApp"> -->
+      <div class="col-sm">
+        <div class="ted">
+          <div class="card-wrap">
+            <h3 id="date1"></h3>
+            <h3 id="date2">Quinta</h3>
+            <a class="agendaTitulo" routerLink="/evento"> Outro Link </a>
+            <img class="imgAgenda" src="assets/_img/agenda/card1.jpg" alt="Card image cap" />
+            <div class="img-overlay"></div>
+            <div id="size__card">
+              <p class="recuo" id="cardBody"> O sapato surgiu no momento que o homem sentiu necessidade de proteger os pés. Desde que pinturas
+                rupestres, datadas entre 12 mil e 15 mil anos a.c., foram descobertas em cavernas da Espanha,
+                representando homens calçados com botas de pele, muito se andou na história do sapato </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-
-
-      <div class="ted">
-        <div class="card-wrap">
-          <h3 id="date1">31</h3>
-          <h3 id="date2">Sexta</h3>
-          
-            <a class="agendaTitulo" routerLink="/evento">  20 Anos do Museu </a>
-          
-            <img class="imgAgenda" src="/assets/_img/agenda/card2.jpg" alt="Card image cap" />
+      
+      <div class="col-sm">
+        <div class="ted">
+          <div class="card-wrap">
+            <h3 id="date1">31</h3>
+            <h3 id="date2">Sexta</h3>
+            <a class="agendaTitulo" routerLink="/evento"> 20 Anos do Museu </a>
+            <img class="imgAgenda" src="assets/_img/agenda/card2.jpg" alt="Card image cap" />
             <div class="img-overlay"></div>
-            <div id="size__card"> 
+            <div id="size__card">
               <p class="recuo" id="cardBody">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae ab illo inventore veritatis et quasi architecto beatae vitae
-                dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-                aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
-                eos qui ratione voluptatem sequi nesciunt.
+                O sapato surgiu no momento que o homem sentiu necessidade de proteger os pés. Desde que pinturas
+                rupestres, datadas entre 12 mil e 15 mil anos a.c., foram descobertas em cavernas da Espanha,
+                representando homens calçados com botas de pele, muito se andou na história do sapato
               </p>
             </div>
+          </div>
         </div>
       </div>
     </div>

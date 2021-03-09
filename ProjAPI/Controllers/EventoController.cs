@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using ProjAPI.Model;
+
 using ProjRepositorio;
 using AutoMapper;
 using ProjAPI.Dtos;
@@ -47,6 +47,30 @@ namespace ProjAPI.Controllers
         }
     }
 
+[HttpGet("getByTitulo/{titulo}")]
+    public async Task<ActionResult> Get(string Titulo)
+    {
+        try 
+        {
+            var eventos = await _repo.GetAllEventoAsyncByTitulo(Titulo);
+            var resultados =_mapper.Map<EventoDTO[]>(eventos);
+            Console.Write(eventos + "\n\n\n\n\n\n\n\n ");
+
+            return Ok(resultados);
+        }catch(System.Exception ex)
+        {
+            Console.Write(ex);
+            return this.StatusCode(StatusCodes.Status500InternalServerError, "Falha no banco de dados");
+        }
+    }
+
+
+
 
    }
+
+
+
+
+
 }

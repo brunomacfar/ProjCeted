@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Threading.Tasks;
 using ProjDominio;
 
@@ -17,6 +18,7 @@ namespace ProjRepositorio
 /*
         Aqui começa MNC CONFIGS
 */
-        Task<wp_db_evento[]> GetAllEventosAsync();
+        Task<Evento[]> GetAllEventosAsync();
+        Task<Evento[]> GetAllEventoAsyncByTitulo(string titulo);
     }
 }

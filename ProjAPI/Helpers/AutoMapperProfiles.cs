@@ -9,7 +9,7 @@ namespace ProjAPI.Helpers
     {
         public AutoMapperProfiles()
         {
-            CreateMap<wp_db_evento, EventoDTO>().ReverseMap();
+            CreateMap<Evento, EventoDTO>().ReverseMap();
         }
     }   
 }

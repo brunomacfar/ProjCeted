@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, LOCALE_ID, OnInit } from '@angular/core';
 import { NavService } from '../_services/nav.service';
 import { HttpClient } from "@angular/common/http";
 import { Evento } from "../_models/Evento";
 import { EventoService } from '../_services/evento.service';
+
 
 @Component({
   selector: 'app-agenda',
@@ -22,14 +23,14 @@ export class AgendaComponent implements OnInit {
 
   ngOnInit() {
     this.nav.show();
-    this.getEventosApp();
+   // this.getEventosApp();
   }
 
   onSelect(event){
     console.log(event);
     this.selectedDate= event;
   }
-
+/*
   getEventosApp(){
     this.eventoService.getEventos().subscribe(
       (_eventos: Evento[]) => {
@@ -39,4 +40,5 @@ export class AgendaComponent implements OnInit {
         console.log(error);
       });
   }
+  */
 }

@@ -30,7 +30,8 @@ namespace ProjAPI
         public void ConfigureServices(IServiceCollection services)
         {
            services.AddDbContext<ProjCetedContext>(
-               c => c.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), providerOptions => providerOptions.EnableRetryOnFailure() ));
+           //    c => c.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), providerOptions => providerOptions.EnableRetryOnFailure() ));
+               c => c.UseMysql(Configuration.GetConnectionString("DefaultConnection"), providerOptions => providerOptions.EnableRetryOnFailure() ));
            services.AddScoped<IProjRepositorio, RepositorioProj>();  
            services.AddControllers().AddNewtonsoftJson(); 
            services.AddCors();

@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'museu', component: MuseuComponent},
   { path: 'timeline', component: TimelineComponent},  
   { path: 'agenda',component: AgendaComponent},
-  { path: 'evento', component: EventoComponent},
+  { path: 'evento/:id', component: EventoComponent},
   { path: 'acervo', component: AcervoComponent},
   { path: 'noticias', component: NoticiasComponent},
   { path: 'informacoes', component: InformacoesComponent},

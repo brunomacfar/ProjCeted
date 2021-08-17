@@ -10,15 +10,15 @@ import { Usuario } from '../_models/Usuario';
 export class UsuarioService {
 baseURL = 'http://localhost:5000/api/usuario';
 
-constructor(private http: HttpClient) { 
-
-}
+constructor(private http: HttpClient) { }
 
 getUsuarios(): Observable<Usuario[]>{
+  console.log(" \N\N\ O OBSERVABLE GETUSUSARIOS FOI UTILIZADO\N\N\ ");
   return this.http.get<Usuario[]>(this.baseURL);
 }
 
 getUsuariobyId(id: number): Observable<Usuario>{
+  console.log("\N\N\N O OBSERVABLE GETUSUSARIOS ID FOI UTILIZADO\N\N\ ");
   return this.http.get<Usuario>(`${this.baseURL}/${id}`);
 }
 

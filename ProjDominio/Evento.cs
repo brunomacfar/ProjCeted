@@ -13,7 +13,7 @@ namespace ProjDominio
     public string dataInicio {get; private set; }
     public string dataFim  {get; private set; }
     public string endereco {get; private set; }
-    public string arquivo {get; private set; }
+    public string img {get; private set; }
     
     }
 }

@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Pridi:wght@700&family=Roboto:wght@400&family=Merriweather&Martel:wght@800&display=swap   ');
 body{
+
     background: url('assets/_img/museuGallery/imgFundo.jpg') center center no-repeat fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -176,6 +177,13 @@ sidenav
   border: 0 transparent
 }
 
+#initFa2:hover{
+  color: #967440;
+}
+#initFa2:focus{
+  color: white;
+  outline: transparent;
+}
 /* The navigation menu links */
 .sidenav a {
   top: 50%;
@@ -224,54 +232,9 @@ sidenav
 /* ----------------------------------------------------
         Aqui temos o CSS do NAVBAR PRINCIPAL
    ----------------------------------------------------*/
-#nav-main{
-    position:fixed;
-    z-index: 80;
-    background-color:rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(3px);
-	  width:100%;
-    height:95px;
-    margin-top: 0px;
-}
-#nav-font{   
-    width:159.76px;
-    height: 40px;
-    color: white;
-    font-family: Martel;
-	text-align:right;
-    font-size:24px;
-	letter-spacing: 1.5;
-}
-#menu a{
-  font-weight: 900;
-    margin-right: 60px;
-    position: relative;
-    width: fit-content;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-  }
-  /* alterado  */
-  #menu a:hover, a:active  {
-  color: #967440;
-  border-right: 5px solid white;
-  border-left: 5px solid white;
-  }
- .ass{
-  border-right:5px solid white;
-  border-left: 5px solid white;
-  background-color: rgb(53, 53, 53);
-}
-#menu a:focus {
-  border-right:5px solid white;
-  border-left: 5px solid white;
-  color: #967440;
-  font-weight: 900;
-}
+
 /*  antigo */
-#menu ul li a:visited{
-  border-right:5px solid white;
-  border-left: 5px solid white;
-}
+
 /* ----------------------------------------------------
             Footer 
    ----------------------------------------------------*/
@@ -520,7 +483,6 @@ sidenav
     outline: none;
     font-size: 15px;
 }
-
 table{
   border: transparent;
 }
@@ -579,13 +541,11 @@ calendar-table-header-divider::after{
   background-color:  #967440;
 }
 
-
-
-
 #agendaContainer{
     /*margin-left: 25%;
     margin-right: 2.5%;*/
     width: 1100px;
+    padding-bottom: 50px;
 }
 .ted{
     width: 387px;
@@ -609,7 +569,7 @@ calendar-table-header-divider::after{
     color: white;
     font-style: normal;
     font-weight: 800;
-    font-size: 32px;
+    font-size: 28px;
     line-height: 110%;
     /* or 44px */
     text-align: justify;
@@ -618,16 +578,13 @@ calendar-table-header-divider::after{
     z-index: 4;
     margin-top: 205px;
     margin-left: 10px;
+    margin-right: 10px;
     text-decoration:none;
 }
 a:hover {
     color: #967440;
     text-decoration: none;
 }
-
-
-
-
 #date1{
     color: white;
     font-size: 40px;
@@ -638,10 +595,10 @@ a:hover {
     position: absolute;
     text-align: center;
     align-content: center;
-    width: 65px;
-    height: 40px;
+    width: 85px;
+    height: 45px;
     margin-left: 15px;
-    margin-top: 14px;
+    margin-top: 9px;
     padding-top: 4px;
     -webkit-text-stroke: 1px rgb(255, 255, 255); /* width and color */
 }
@@ -654,7 +611,7 @@ a:hover {
     font-style: normal;
     position: absolute;
     text-align: center;
-    width: 65px;
+    width: 85px;
     height: 33px;
     margin-left: 15px;
     margin-top: 52px;
@@ -671,7 +628,7 @@ a:hover {
     font-size: 18px;
     line-height: 150%;
     text-align: justify;
-    padding-top: 30px;
+    padding-top: 45px;
     margin-bottom: 10px;
     padding-bottom: 5px;   
     display: -webkit-box;

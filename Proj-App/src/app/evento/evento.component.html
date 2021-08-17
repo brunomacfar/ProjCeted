@@ -1,40 +1,38 @@
 <div class="eventos">
-  
   <div class="conteudoEvento">
-    <img class="imagemEvento" src="assets/_img/agenda/card1.jpg"  alt="Card image cap" />
-    <div class="img-overlay2"></div>
+        
     
-    
-    <h2 class="tituloEvento" id="ajusteEvento">
-      Este Será um titulo majestoso
-    </h2>
-    
-    
-    
-    
-    <div class="container" id="contEvento">
-      <div class="row">
-        <div class="col-sm" id="info">
-          <i class="far fa-clock fa-2x" id="simbolo"></i>
-          <a id="textEvento">Horário</a>
-        </div>
+      <div *ngFor="let eventoApp of eventosApp">
+        
+        <img class="imagemEvento" src="http://ceted.feevale.br/museudocalcado/upload/{{eventoApp.img}}" alt="Card image cap" />
+        <div class="img-overlay2"></div>
 
-        <div class="col-sm" id="info">
-          <i class="fas fa-map-marker-alt fa-2x" id="simbolo"></i>
-          <a id="textEvento">Endereço</a>
+        <h2 class="tituloEvento" id="ajusteEvento">{{eventoApp.titulo}}</h2>
+
+        <div class="container" id="contEvento">
+          <div class="row">
+            <div class="col-sm" id="info">
+              <i class="far fa-clock fa-2x" id="simbolo"></i>
+              <a id="textEvento"> {{eventoApp.horaAbertura}} às {{eventoApp.horaEncerramento}}</a>
+            </div>
+
+            <div class="col-sm" id="info">
+              <i class="fas fa-map-marker-alt fa-2x" id="simbolo"></i>
+              <a id="textEvento"> {{eventoApp.endereco}}</a>
+            </div>
+            <div class="col-sm" id="info">
+              <i class="far fa-calendar-alt fa-2x" id="simbolo"></i>
+              <a id="textEvento">{{eventoApp.dataInicio | date: 'dd/MM/yyyy'}} - {{eventoApp.dataFim | date: 'dd/MM/yyyy' }}</a>
+            </div>
+          </div>
         </div>
-        <div class="col-sm" id="info">
-          <i class="far fa-calendar-alt fa-2x" id="simbolo"></i>
-          <a id="textEvento">Período</a>
+     
+        <div id="descricaoEvento">
+          <a id="textEvento">
+            {{eventoApp.descricao}}
+          </a>
         </div>
       </div>
-    </div>
-
-    <div id="descricaoEvento">
-      <a id="textEvento">
-        O sapato surgiu no momento que o homem sentiu necessidade de proteger os pés. Desde que pinturas rupestres, datadas entre 12 mil e 15 mil anos a.c., foram descobertas em cavernas da Espanha, representando homens calçados com botas de pele, muito se andou na história do sapato
-      </a>
-    </div>
+    
   </div>
-
 </div>

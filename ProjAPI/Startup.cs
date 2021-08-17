@@ -14,6 +14,8 @@ using Microsoft.Extensions.Logging;
 using ProjRepositorio;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc.NewtonsoftJson;
+using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
+
 
 namespace ProjAPI
 {
@@ -29,9 +31,29 @@ namespace ProjAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+           /* Usar este método para banco de dados Microsoft Sql
+           
            services.AddDbContext<ProjCetedContext>(
-           //    c => c.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), providerOptions => providerOptions.EnableRetryOnFailure() ));
+               c => c.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), providerOptions => providerOptions.EnableRetryOnFailure() ));
                c => c.UseMysql(Configuration.GetConnectionString("DefaultConnection"), providerOptions => providerOptions.EnableRetryOnFailure() ));
+            */
+             services.AddDbContext<ProjCetedContext>(
+                dbContextOptions => dbContextOptions
+                    .UseMySql(
+                        // Replace with your connection string.
+                        "server=ceted.feevale.br; user=calcado; password=projCalcado*12*; Database=calcadoMuseu",
+                         
+                        // Replace with your server version and type. if needed port=3306; 
+                        // For common usages, see pull request #1233.
+                       // new MySqlServerVersion(new Version(8, 0, 21)), // use MariaDbServerVersion for MariaDB
+                        mySqlOptions => mySqlOptions
+                            .CharSetBehavior(CharSetBehavior.NeverAppend))
+                    // Everything from this point on is optional but helps with debugging.
+                    .EnableSensitiveDataLogging()
+                    .EnableDetailedErrors());
+
+
+
            services.AddScoped<IProjRepositorio, RepositorioProj>();  
            services.AddControllers().AddNewtonsoftJson(); 
            services.AddCors();

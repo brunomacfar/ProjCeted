@@ -44,18 +44,15 @@ namespace ProjRepositorio
         public async Task<Usuario[]> GetAllUsuariosAsync()
         {
             IQueryable<Usuario> query = _context.Usuarios; 
-            
             query = query.OrderByDescending(c => c.Id); 
-
             return await query.ToArrayAsync();
         }
+
         public async Task<Usuario> GetAllUsuariosAsyncById(int id)
         {
             IQueryable<Usuario> query = _context.Usuarios; 
-            
-            query = query.OrderByDescending(c => c.Id)
-                         .Where(c => c.Id == id); 
-                         
+                        query = query.OrderByDescending(c => c.Id)
+                         .Where(c => c.Id == id);             
             return await query.FirstOrDefaultAsync();
         }
         public async Task<Usuario[]> GetAllUsuariosAsyncByNome(string nome)
@@ -71,30 +68,49 @@ namespace ProjRepositorio
 
             AQUI COMEÇAM AS CONFIGURAÇÕES PARA O MUSEU NACIONAL DO CALÇADO!
 
-        -------------------!!!-------------------!!!-------------------  
-     
-     
+
+
+
+        -------------------!!!-------------------!!!-------------------   
                             EVENTOS
-     */
+        -------------------!!!-------------------!!!-------------------   */
        public async Task<Evento[]> GetAllEventosAsync()
         {
-            IQueryable<Evento> query = _context.Evento;
+            IQueryable<Evento> query = _context.wp_db_evento;
                 query = query.OrderByDescending(c => c.id);
-                         
+
             return await query.ToArrayAsync();
         }
 
          public async Task<Evento[]> GetAllEventoAsyncByTitulo(string Titulo)
         {
-            IQueryable<Evento> query = _context.Evento;
+            IQueryable<Evento> query = _context.wp_db_evento;
 
                 query = query.AsNoTracking()
                         .Where(t => t.titulo.ToLower().Contains(Titulo.ToLower()));
                          
             return await query.ToArrayAsync();
         } 
-    
+        /*  -------------------!!!-------------------!!!-------------------
+                                    NOTICIAS
+            -------------------!!!-------------------!!!------------------- */    
+        public async Task<Noticia[]> GetAllNoticiasAsync()
+        {
+            IQueryable<Noticia> query = _context.wp_db_noticia;
+            query = query.AsNoTracking().OrderByDescending(n => n.id);
 
+            return await query.ToArrayAsync();
+        }
+
+         public async Task<Noticia[]> GetAllNoticiasAsyncByManchete(string Manchete)
+        {
+            IQueryable<Noticia> query = _context.wp_db_noticia;
+
+                query = query.AsNoTracking()
+                        .Where(t => t.manchete.ToLower().Contains(Manchete.ToLower()));
+                         
+            return await query.ToArrayAsync();
+        } 
 
     }
     

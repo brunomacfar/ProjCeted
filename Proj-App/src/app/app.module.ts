@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 
@@ -30,13 +30,15 @@ import { LightboxModule } from 'ng-gallery/lightbox';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MomentDatePipeComponent } from './MomentDatePipe/MomentDatePipe.component';
 registerLocaleData(localeBr);
 
 
 @NgModule({
-   declarations: [
+   declarations: [	
       AppComponent,
-      routingComponents
+      routingComponents,
+      MomentDatePipeComponent
    ],
    imports: [
       BrowserModule,
@@ -56,7 +58,8 @@ registerLocaleData(localeBr);
       GalleryModule,
       LightboxModule,
       MatDatepickerModule,
-      MatNativeDateModule      
+      MatNativeDateModule
+   
    ],
    providers: [
       { provide: LOCALE_ID, useValue: 'pt-BR' },

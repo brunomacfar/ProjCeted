@@ -4,8 +4,8 @@ export interface Evento{
     descricao: string;
     horaAbertura: string;
     horaEncerramento: string;
-    dataInicio: string;
-    dataFim: string;
+    dataInicio: Date;
+    dataFim: Date;
     endereco: string;
-    arquivo: string;
+    img: string;
 }

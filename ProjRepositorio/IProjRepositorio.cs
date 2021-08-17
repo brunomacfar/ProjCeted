@@ -20,5 +20,10 @@ namespace ProjRepositorio
 */
         Task<Evento[]> GetAllEventosAsync();
         Task<Evento[]> GetAllEventoAsyncByTitulo(string titulo);
+
+        Task<Noticia[]> GetAllNoticiasAsync();
+        Task<Noticia[]> GetAllNoticiasAsyncByManchete(string manchete);
+
+
     }
 }

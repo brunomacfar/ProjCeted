@@ -23,7 +23,7 @@ namespace ProjAPI.Dtos
         public string Telefone { get; set; }   
         public string Cargo { get; set; }   
         public string Setor { get; set; }
-         public string Sehna { get; set; }
+         public string Senha { get; set; }
         public string ImgUrl { get; set; }
     }
 }

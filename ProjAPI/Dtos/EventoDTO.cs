@@ -10,7 +10,7 @@ namespace ProjAPI.Dtos
     public string dataInicio {get; set; }
     public string dataFim  {get; set; }
     public string endereco {get; set; }
-    public string arquivo {get; set; }
+    public string img {get; set; }
     
     }
 }

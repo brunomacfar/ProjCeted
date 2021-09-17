@@ -1,21 +1,21 @@
 <div class="contentNoticias">
     <div class="container" id="noticiaConteiner">
-        <h2 id="mainTitulo">Acontece</h2>
+        <h2 id="mainTitulo">Notícias</h2>
 
         <div class="row">
-            <ul *ngFor="let noticiaApp of noticiasApp">
+            <ul *ngFor="let noticiaApp of noticiasApp | slice:0:5; let i=index">
                 <li id="linha-horizontal">
                     
                     <div class="container">
-                        <h3 id="noticiaAssunto"> {{ noticiaApp.categoria }} </h3>
+                        
                         <div class="row" id="pt1">
                             <div class="col-sm-4">
-                                <a class="grow" id="imgLink" href="{{noticiaApp.url}}"> <img id="image" src="http://ceted.feevale.br/museudocalcado/upload/{{noticiaApp.img}}"></a>
+                                <a class="grow" id="imgLink" href="{{noticiaApp.tituloUrl}}"> <img id="image" src="{{noticiaApp.midia}}"></a>
                             </div>
                             <div class="col-sm-8">
-                                <h2 id="noticiaTitulo"> {{ noticiaApp.manchete }} </h2>
-                                <h3 id="noticiaInfoExtra">{{noticiaApp.dataIni | date: 'dd/MM/yyyy' }} -
-                                    {{noticiaApp.descricao}} </h3>
+                                <h3 id="noticiaAssunto">  {{ noticiaApp.titulo }} </h3>
+                                <h2 id="noticiaTitulo">   {{ noticiaApp.manchete }} </h2>
+                                <h3 id="noticiaInfoExtra">{{ noticiaApp.resumo }} </h3>
                             </div>
                         </div>
                     </div>

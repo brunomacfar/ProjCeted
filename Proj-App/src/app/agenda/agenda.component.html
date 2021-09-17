@@ -4,68 +4,18 @@
       Agenda de Exposições e Eventos
     </h1>
     <div class="container-fluid">
-
-      <div class="row">
-        <div class="col-md-2">
-          <div id="agendaID">
-            <mat-calendar id="calendario" [selected]="selectedDate" (selectedChange)="onSelect($event)"> </mat-calendar>
-          </div>
-        </div>
+      <gallery id="galeriaHistoria" [itemTemplate]="itemTemplate"></gallery>   
+       <ng-template  #itemTemplate
+                    let-index="index"
+                    let-type="type"
+                    let-data="data"
+                    let-currIndex="currIndex">
+        <span *ngIf="type === 'image' && index === currIndex" [@slideAnimation] class="item-text">
+          {{data.title}}
+        </span>
+      </ng-template>
       
-
-      <div class="row">
-        <div *ngFor='let eventoApp of eventosApp | slice:0:2'>
-
-          <div class="col-md-5">
-            <div class="ted">
-              <div class="card-wrap">
-                <h3 id="date1">{{ eventoApp.dataInicio | date: 'dd' }} </h3>
-                <h3 id="date2">{{ eventoApp.dataInicio | date: 'MMMM' }}</h3>
-                <a class="agendaTitulo" routerLink="/evento"> {{eventoApp.titulo }} </a>
-                <img class="imgAgenda" alt="Card image cap" />
-                <div class="img-overlay"></div>
-                <div id="size__card">
-                  <p class="recuo" id="cardBody"> {{ eventoApp.descricao }} </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-5">
-            <div class="ted">
-              <div class="card-wrap">
-                <h3 id="date1">{{ eventoApp.dataInicio | date: 'dd' }} </h3>
-                <h3 id="date2">{{ eventoApp.dataInicio | date: 'MMMM' }}</h3>
-                <a class="agendaTitulo" routerLink="/evento"> {{eventoApp.titulo }} </a>
-                <img class="imgAgenda" alt="Card image cap" />
-                <div class="img-overlay"></div>
-                <div id="size__card">
-                  <p class="recuo" id="cardBody"> {{ eventoApp.descricao }} </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-8">
-          <div class="ted">
-            <div class="card-wrap">
-              <h3 id="date1">{{ eventoApp.dataInicio | date: 'dd' }} </h3>
-              <h3 id="date2">{{ eventoApp.dataInicio | date: 'MMMM' }}</h3>
-              <a class="agendaTitulo" routerLink="/evento"> {{eventoApp.titulo }} </a>
-              <img class="imgAgenda" alt="Card image cap" />
-              <div class="img-overlay"></div>
-              <div id="size__card">
-                <p class="recuo" id="cardBody"> {{ eventoApp.descricao }} </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </div>
   </div>
-</div>
+

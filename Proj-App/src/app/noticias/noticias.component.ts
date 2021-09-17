@@ -41,14 +41,11 @@ export class NoticiasComponent implements OnInit {
     this.noticiaService.getAllNoticias().subscribe(
       (_noticias: Noticia[]) => {
             
-        this.noticiasApp = _noticias;
-        
-        this.sanitizer.bypassSecurityTrustResourceUrl(this.noticiaApp.img);
-        
+        this.noticiasApp = _noticias;        
         console.log(this.noticiasApp);
       }, error => {
         console.log(error);
-        this.toastr.error(`Erro ao tentar Carregar eventos: ${error}`);
+        this.toastr.error(`Erro ao tentar Carregar Noticias: ${error}`);
       });
   }
 }

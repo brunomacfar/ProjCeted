@@ -1,4 +1,16 @@
-export interface Noticia {
+
+export interface Noticia{
+    tituloUrl: string;
+    titulo: string;
+    resumo: string;
+    dataCadastro: string;
+    midia: string;
+    destaque: string;
+}
+
+
+
+/*export interface Noticia {
     id: number;
     manchete: string;
     categoria: string;
@@ -7,3 +19,4 @@ export interface Noticia {
     dataIni: Date;
     img: string;
 }
+*/

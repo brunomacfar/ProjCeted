@@ -9,13 +9,13 @@
                     <div class="container">
                         
                         <div class="row" id="pt1">
-                            <div class="col-sm-4">
+                            <div class="col-sm-4" id="espacoNt">
                                 <a class="grow" id="imgLink" href="{{noticiaApp.tituloUrl}}"> <img id="image" src="{{noticiaApp.midia}}"></a>
                             </div>
                             <div class="col-sm-8">
-                                <h3 id="noticiaAssunto">  {{ noticiaApp.titulo }} </h3>
-                                <h2 id="noticiaTitulo">   {{ noticiaApp.manchete }} </h2>
-                                <h3 id="noticiaInfoExtra">{{ noticiaApp.resumo }} </h3>
+                                <h3  id="noticiaInfoExtra">  {{ noticiaApp.dataCadastro | date: 'dd/MM/yyyy' }}</h3>
+                                <h2 id="noticiaTitulo">   {{ noticiaApp.titulo }}  </h2>
+                                <h3 id="noticiaAssunto">{{ noticiaApp.resumo }} </h3>
                             </div>
                         </div>
                     </div>

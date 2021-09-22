@@ -24,7 +24,7 @@ export class InitNavComponent implements OnInit  {
   console.log(this.counter);
 
   if( this.counter % 2 == 0 ) {
-      document.getElementById("mySidenav").style.width = "5.6%";
+      document.getElementById("mySidenav").style.width = "10%";
   } else {
       document.getElementById("mySidenav").style.width = "50%";
     }

@@ -10,7 +10,9 @@
 #noticiaContainer{
     width: 50%;
 }
-
+#espacoNt{
+    margin-top: 20px;
+}
 #mainTitulo{
     position: relative;
     color: black;
@@ -18,7 +20,7 @@
     font-style: normal;
     font-weight: 900;
     font-size: 40px;
-    line-height: 50px;
+    line-height: 40px;
     display: block;
     align-items: center;
     text-align: center;
@@ -47,16 +49,18 @@ li {
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
-    line-height: 50px;
-    width: 350px;
+    line-height: 40px;
+    width: 100%;
     margin-left: 20px;
+    text-align: justify;
 }
 
 #noticiaAssunto{
     font-family: Merriweather;
     font-style: normal;
-    font-size: 13px;
-    line-height: 50px;
+    font-size: 18px;
+    line-height: 25px;
+    margin-left: 15px;
 }
 
 #noticiaInfoExtra{

@@ -30,15 +30,13 @@ import { LightboxModule } from 'ng-gallery/lightbox';
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MomentDatePipeComponent } from './MomentDatePipe/MomentDatePipe.component';
 registerLocaleData(localeBr);
 
 
 @NgModule({
    declarations: [	
       AppComponent,
-      routingComponents,
-      MomentDatePipeComponent
+      routingComponents
    ],
    imports: [
       BrowserModule,

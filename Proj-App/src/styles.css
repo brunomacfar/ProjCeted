@@ -25,13 +25,16 @@ body{
 #logoOficial{
     margin-top: 20;
     margin-left: 30;
-    width: 140px;
-    height: 55px;
+    max-width: 140px;
+    max-height: 55px;
+    width: 100%;
+    height: 100%;
+
 }
 .content{
     position: relative;
     padding-top: 140px;
-    background-color:rgba(0, 0, 0, 0.65);
+    background-color:rgba(0, 0, 0, 0.75);
 }
 #firstTitulo{
     position: relative;
@@ -84,8 +87,7 @@ body{
     padding: 3em;
     width: 50%;
     margin-top: 150px;
-    margin: 0em auto 10em;
-  
+    margin: 0em auto 10em; 
 }
 
 /*------------------------------------------------------------------
@@ -93,8 +95,8 @@ body{
 ----------------------------------------------------------------*/
 .galeria {
   align-items: center;
-  width: 100%;
-  height: 100%;   
+  max-width: 100%;
+  max-height: 100%;   
   position: absolute;
   overflow: hidden;
   margin: auto;
@@ -103,8 +105,8 @@ body{
 .foto{
   position: absolute;
   align-items: center;
-  width: 100%;
-  height:100%;
+  max-width: 100%;
+  max-height:100%;
   opacity: 0;
   animation-name: animacao;
   animation-duration: 20s;
@@ -132,102 +134,12 @@ body{
   animation-delay: 15s;
   }
 /*
-sidenav
+_____________________________
+
+        SIDENAV
+_____________________________
 */
-.sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 5.6%; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  right: 0;
-  background-color:rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(5px);
-  overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.7s; /* 0.5 second transition effect to slide in the sidenav */
-  border: 0 transparent ;
-}
-@media screen and (min-width:1400px){
-  .sidenav{
-      width: 5.6%;
-  }
-  button{
-  left: 20px; 
-   }
-  #initNav{
-      margin-left:45px;
-      top: 50%;
-      transform: translate(0, -50%);
-      position: absolute;
-      right: 60px;
-      font-size: 90px;
-  }
-  #sideItem{
-      font-size: 90px;
-  }
-}
-#initFa2{ 
-  z-index: 1;
-  color: white;
-  background-color: transparent;
-  margin-left: 8px;
-  position: absolute;
-  top: 50%;
-  transform: rotate(90deg);
-  z-index: 1;
-  border: 0 transparent
-}
 
-#initFa2:hover{
-  color: #967440;
-}
-#initFa2:focus{
-  color: white;
-  outline: transparent;
-}
-/* The navigation menu links */
-.sidenav a {
-  top: 50%;
-  margin-right: 40px; 
-  color: white;
-}
-#sideItem{
-  color: white;
-  font-family: Pridi;
-  font-style: normal;
-  font-weight: bold;
-  text-align: right;
-  font-size: 64px;
-  margin: 25px;
-  
-  line-height: 1.5%;
-}
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #967440;
-}
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-#initNav {
-  transition: margin-left .7s;
-  padding: 20px;
-  top: 50%;
-  transform: translate(0, -40%);
-  position: absolute;
-  right: 20px
-}
-
-/* Ajusta tamanho de fonte e espaçamento em telas pequenas) */
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
 
 /* ----------------------------------------------------
         Aqui temos o CSS do NAVBAR PRINCIPAL

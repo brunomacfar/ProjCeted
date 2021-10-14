@@ -51,29 +51,8 @@ export class MuseuComponent implements OnInit {
     galleryRef.addImage({
       src: 'assets/_img/museuGallery/historia/img5.jpg',
       thumb: 'assets/_img/museuGallery/historia/img5.jpg',
-      title: 'Livro MNC (2005)'
-    });
-    galleryRef.addImage({
-      src: 'assets/_img/museuGallery/historia/img6.jpg',
-      thumb: 'assets/_img/museuGallery/historia/img6.jpg',
-      title: 'Evento realizado pelo MNC em parceria com Abicalçados - Abril de 2017'
-    });
-    galleryRef.addImage({
-      src: 'assets/_img/museuGallery/historia/img7.jpg',
-      thumb: 'assets/_img/museuGallery/historia/img7.jpg',
-      title: 'Mestre e pesquisador Daniel Keller fazendo sua fala a respeito do MNC e sua ligação com a moda, à cultura e arte local – 2017.'
-    });
-    galleryRef.addImage({
-      src: 'assets/_img/museuGallery/historia/img8.jpg',
-      thumb: 'assets/_img/museuGallery/historia/img8.jpg',
       title: 'ACERVO MNC – Bota com cadarço em couro ano de 1920'
     });
-    galleryRef.addImage({
-      src: 'assets/_img/museuGallery/historia/img9.png',
-      thumb: 'assets/_img/museuGallery/historia/img9.png',
-      title: 'ACERVO MNC - Calçado Ruy Chaves com escama de peixe, 1971'
-    });
-
   /*
   
   this.items = this.imageData.map(item => new ImageItem({src: item.srcUrl, thumb: item.previewUrl}));

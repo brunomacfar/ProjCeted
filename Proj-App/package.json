@@ -16,6 +16,7 @@
     "@angular/common": "~13.0.0-next.6",
     "@angular/compiler": "~13.0.0-next.6",
     "@angular/core": "~13.0.0-next.6",
+    "@angular/flex-layout": "^12.0.0-beta.35",
     "@angular/forms": "~13.0.0-next.6",
     "@angular/material": "^12.2.6",
     "@angular/material-moment-adapter": "^12.2.6",
@@ -37,7 +38,7 @@
     "react-dom": "^17.0.1",
     "react-horizontal-timeline": "^1.4.0",
     "rxjs": "~6.5.4",
-    "tslib": "^1.10.0",
+    "tslib": "^1.14.1",
     "yargs": "^15.3.0",
     "zone.js": "~0.11.4"
   },

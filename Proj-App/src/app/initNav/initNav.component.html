@@ -1,31 +1,36 @@
-<section class="galeria">
-  <img class="foto" src="assets/_img/inicial/Inicial1.jpg" />
-  <img class="foto" src="assets/_img/inicial/Inicial2.jpg" />
-  <img class="foto" src="assets/_img/inicial/Inicial3.jpg" />
-  <img class="foto" src="assets/_img/inicial/Inicial4.jpg" />
-</section>
+<div class="contentInit">
+  <div class="initNav">
+    <mat-sidenav-container class="sidenav">
+      <mat-sidenav #sidenav mode="side" position="end" [(opened)]="opened" (opened)="events.push('open!')"
+        (closed)="events.push('close!')">
+        <div class="container" id="sideLink">
+          <ul class="nav flex-column right">
+            <li class="nav-item" id="sideItem">
+              <a routerLink="/museu">O Museu</a>
+            </li>
+            <li class="nav-item" id="sideItem">
+              <a routerLink="/noticias">Notícias</a>
+            </li>
+            <li class="nav-item" id="sideItem">
+              <a routerLink="/informacoes">Informações</a>
+            </li>
+          </ul>
+        </div>
+      </mat-sidenav>
 
-
-<div id="mySidenav" class="sidenav">
-  <!-- botao que controla a abertura/fechamento sidenav(verificar conteudo typescrypt para funcionamento) -->
-  <button (click)="clickMe()" id="initFa2" class="fas fa-bars fa-3x"></button>
-
-  <ul class="nav flex-column right" id="initNav">
-    <li class="nav-item" id="sideItem" id="sideItem">
-      <a class="nav-link" routerLink="/museu"> O Museu</a>
-    </li>
-  <!--  <li class="nav-item" id="sideItem">
-      <a class="nav-link" routerLink="/acervo"> Acervo</a>
-    </li>-->
-    <!-- <li class="nav-item" id="sideItem">
-      <a class="nav-link" routerLink="/agenda"> Agenda </a>
-    </li>
-    -->
-    <li class="nav-item" id="sideItem">
-      <a class="nav-link" routerLink="/noticias"> Notícias</a>
-    </li>
-    <li class="nav-item" id="sideItem">
-      <a class="nav-link" routerLink="/informacoes">Informações</a>
-    </li>
-  </ul>
+      <mat-sidenav-content>
+        
+        <section class="galeria">
+          <img class="foto" src="assets/_img/inicial/Inicial1.jpg" />
+          <img class="foto" src="assets/_img/inicial/Inicial2.jpg" />
+          <img class="foto" src="assets/_img/inicial/Inicial3.jpg" />
+          <img class="foto" src="assets/_img/inicial/Inicial4.jpg" />
+        </section>
+        <div class="faixaIni">
+          <button mat-button (click)="sidenav.toggle()" class="fas fa-bars fa-2x"></button>
+        </div>
+      
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
 </div>

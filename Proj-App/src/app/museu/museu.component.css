@@ -1,19 +1,3 @@
-@media screen and (max-width : 480px) {
-    [id=decretoIcon]{
-        position: relative;
-        width: 100%;
-        height: 100%;
-        max-width: 120px;
-        top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-    }    
-    #tituloLinhaTempo{   
-        text-align: center;
-    }   
-}
-
 #conteudo{
     position: relative;
     max-width: 100%;
@@ -26,6 +10,20 @@
     width: 100%;
     max-width: 900px;
    z-index: auto; 
+}
+#tituloHistoria{
+    color: white;
+    position: relative;
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 50px;
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin-right: auto;
+    margin-bottom: 70px;
 }
 #tituloMuseu{
     color: white;
@@ -55,8 +53,9 @@
 }
 #videoPlayer{
     position: relative;
-    margin-top: 80px;
+    margin-top: 50px;
     align-items: center;
+    padding-bottom: 45px;
 }
 #galleyCont{
     position: relative;
@@ -92,6 +91,9 @@
 #decretoIcon :hover{
     color: #967440;
     transform: scale(1.1);
+    padding-top: 85px;
+    
+
 }
 /* -         Aqui começam o itens #timeLine          -*/
 /*- #timeLine{
@@ -147,7 +149,7 @@
 
 .item-text{
     position: absolute;
-    top: 0;
+    top: 65%;
     left: 0;
     right: 0;
     color: #fff;
@@ -182,4 +184,116 @@ blockquote{
     width:200px; 
     width:-webkit-calc(100% - 2px);
     margin-bottom: 35px;
+}
+/* ----------------------------------------------------
+            Mat-group 
+   ----------------------------------------------------*/
+mat-tab-group{
+    padding-top: 85px;
+}
+.mat-tab-label-container {
+    background-color: rgba(255, 255, 255, 0.109);
+}
+.mat-tab-label {
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+}
+.mat-tab-labels {
+    display: flex;
+    width: max-content;
+}
+/* Styles for the active tab label */
+.mat-tab-label.mat-tab-label-active {
+    font-family: Merriweather;
+    font-weight: 900;
+    background-color: transparent;
+    color: #967440;
+    font-size: 27px;
+    -webkit-text-stroke: 0.1px #584425; /* width and color */   
+}
+
+.mat-tab-label {
+    flex-basis: auto;
+    align-items: center;
+    flex-grow: 1;
+}
+.mat-tab-header {
+    height: 90px;
+}
+.mat-tab-labels {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.mat-tab-group 
+.mat-tab-header 
+.mat-tab-label {
+    flex-basis: 0;
+    flex-grow: 1;
+    height: 100%;
+}
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+    background-color: #967440;
+    height: 5px;
+}
+
+.mat-tab-label.mat-tab-label-active {
+    font-family: Merriweather;
+    font-weight: 900;
+    background-color: white;
+    color: #967440;
+    font-size: 28px;
+    
+}
+
+@media screen and (max-width : 480px) {
+    [id=decretoIcon]{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        max-width: 120px;
+        top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+    }    
+    #tituloLinhaTempo{   
+        text-align: center;
+    }   
+    /* ----------------------------------------------------
+            Mat-group 
+   ----------------------------------------------------*/
+   .mat-tab-label {
+    font-family: Merriweather;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8px;
+    background-color: transparent;
+    color: white;
+}
+.mat-tab-label.mat-tab-label-active {
+    font-family: Merriweather;
+    font-weight: 400;
+    background-color: white;
+    color: #967440;
+    font-size: 19px;
+    -webkit-text-stroke: 0.1px #584425; /* width and color */   
+}
+    .mat-tab-header {
+    height: 45px;
+    }
+    .mat-tab-label .mat-tab-label-content {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    height: 100%;
+    width: 110px;
+    overflow-wrap: break-word;
+    }
+   
 }

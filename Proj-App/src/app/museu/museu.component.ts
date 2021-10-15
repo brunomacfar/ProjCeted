@@ -1,4 +1,4 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 import { Gallery, GalleryItem, ImageItem, ThumbnailsPosition, ImageSize, ThumbnailsMode, GalleryRef } from 'ng-gallery';
 import { Lightbox } from 'ng-gallery/lightbox';
 import { map } from 'rxjs/operators';
@@ -10,6 +10,7 @@ import { NavService } from '../_services/nav.service';
   selector: 'app-museu',
   templateUrl: './museu.component.html',
   styleUrls: ['./museu.component.css'],
+  encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MuseuComponent implements OnInit {

@@ -1,36 +1,44 @@
 <div class="contentInit">
-  <div class="initNav">
-    <mat-sidenav-container class="sidenav">
-      <mat-sidenav #sidenav mode="side" position="end" [(opened)]="opened" (opened)="events.push('open!')"
-        (closed)="events.push('close!')">
-        <div class="container" id="sideLink">
-          <ul class="nav flex-column right">
-            <li class="nav-item" id="sideItem">
-              <a routerLink="/museu">O Museu</a>
-            </li>
-            <li class="nav-item" id="sideItem">
-              <a routerLink="/noticias">Notícias</a>
-            </li>
-            <li class="nav-item" id="sideItem">
-              <a routerLink="/informacoes">Informações</a>
-            </li>
-          </ul>
-        </div>
-      </mat-sidenav>
+  <section class="galeria">
+    <img class="foto" src="assets/_img/inicial/Inicial1.jpg" />
+    <img class="foto" src="assets/_img/inicial/Inicial2.jpg" />
+    <img class="foto" src="assets/_img/inicial/Inicial3.jpg" />
+    <img class="foto" src="assets/_img/inicial/Inicial4.jpg" />
+  </section>
 
-      <mat-sidenav-content>
-        
-        <section class="galeria">
-          <img class="foto" src="assets/_img/inicial/Inicial1.jpg" />
-          <img class="foto" src="assets/_img/inicial/Inicial2.jpg" />
-          <img class="foto" src="assets/_img/inicial/Inicial3.jpg" />
-          <img class="foto" src="assets/_img/inicial/Inicial4.jpg" />
-        </section>
-        <div class="faixaIni">
-          <button mat-button (click)="sidenav.toggle()" class="fas fa-bars fa-2x"></button>
-        </div>
-      
-      </mat-sidenav-content>
-    </mat-sidenav-container>
+  <div class="initNav">
+    <div class="d-flex flex-column flex-shrink-0 p-3 right" id="sideBar">
+      <a href="/" class="d-flex mb-3 mb-md-0">
+        <img src="assets/_img/logoBrancoOficial.png" id="logoOficial" >
+      </a>
+      <hr>
+      <ul class="nav nav-pills flex-column mb-auto">
+        <li class="nav-item">
+          <a routerLink="/museu" class="nav-link" aria-current="page">
+            O Museu
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/espacoAcademico" class="nav-link ">
+            Atividades de Ensino           
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/acervo" class="nav-link ">
+            Acervo
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/noticias" class="nav-link ">
+            Notícias
+          </a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/informacoes" class="nav-link ">
+            Contato
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>

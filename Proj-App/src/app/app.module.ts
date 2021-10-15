@@ -21,6 +21,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule} from '@angular/material/icon'; 
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatGridListModule} from '@angular/material/grid-list';
+
+
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -37,14 +41,16 @@ import { LightboxModule } from 'ng-gallery/lightbox';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AtividadeEnsinoComponent } from './atividadeEnsino/atividadeEnsino.component';
+import { AcervoComponent } from './acervo/acervo.component';
 registerLocaleData(localeBr);
 
 
 @NgModule({
-   declarations: [		
+   declarations: [			
       AppComponent,
       routingComponents,
-      AtividadeEnsinoComponent
+      AtividadeEnsinoComponent,
+      AcervoComponent
    ],
    imports: [
       BrowserModule,
@@ -72,7 +78,9 @@ registerLocaleData(localeBr);
       MatButtonModule,
       FlexLayoutModule,
       MatFormFieldModule,
-      MatSelectModule
+      MatSelectModule,
+      MatTabsModule,
+      MatGridListModule
    
    ],
    providers: [

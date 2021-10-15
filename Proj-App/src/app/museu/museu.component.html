@@ -1,104 +1,70 @@
+<div class="container" id="conteudo">
+  <div class="container" id="museuContainer">
+    <!-- Historia  -->
+    <div>
+      <h1 id="tituloHistoria">Nossa História</h1>
+      <p id="textGeral">
+        Após a criação do Museu Nacional do Calçado, em 1998, através do decreto Municipal 159/98, o MNC ganha um
+        espaço no
+        Câmpus I da Universidade Feevale, localizado na Av. Mauricio Cardoso, no bairro de Hamburgo Velho, em Novo
+        Hamburgo.
+        Esse espaço passou por uma reforma para poder receber o acervo do Museu. Ele encontra-se na entrada da
+        recepção do
+        Campus, facilitando assim o acesso ao MNC.
+      </p>
+      <p id="textGeral">
+        Em setembro de 1999 o Museu Nacional do Calçado abre as portas a comunidade, com a sua 1ª exposição. A
+        mostra era
+        composta pelo acervo do Sr. Carlos Gilberto Simon, 1º doador do MNC, quem esteve presente, e também, foi
+        homenageado
+        no evento.
+        A cerimônia contou com várias autoridades da época e teve o ato simbólico de corte de faixa para oficializar
+        a
+        abertura.
 
-  <div class="container" id="conteudo">
-    <div class="container" id="museuContainer">
-      <div>
-        <h2 id="firstTitulo">Quem Somos</h2>
+      </p>
+      <p id="textGeral">
+        Em 2005 o MNC, juntamente com a Feevale, publicou um livro chamado “Memória do Setor Coureiro-Calçadista:
+        Pioneiros e
+        Empreendedores do Vale do Rio dos Sinos” de autoria de Claudia Schemes, Cleber Cristiano Prodanov, Ida
+        Helena Thönn e
+        Rodrigo Ferla Martins, contendo relatos e vivencias desses, que fizeram da nossa região, o polo de sucesso
+        nacional.
+      </p>
+      <p id="textGeral">
+        Seu acervo apresenta peças raras, produzidas em diferentes épocas e continentes. Calçados produzidos há
+        muitos anos,
+        por simples sapateiros, têm hoje um valor histórico incalculável. A exposição permanente mostra a você a
+        vida e arte
+        de seus antepassados contando a história do nosso povo.
 
-        <p id="textGeral">
-          A cidade de Novo Hamburgo, denominada também como Capital Nacional do Calçado, sempre esperou por um espaço
-          que
-          guardasse a memória do setor coureiro calçadista, que trouxe progresso e crescimento ao Vale do Rio dos Sinos,
-          no Rio
-          Grande do Sul. Em 1998, este desejo se torna realidade, através de uma proposta com estes objetivos.
-        </p>
-        <p id="textGeral">
-          Apoiado pela Universidade Feevale e pelas entidades empresariais, objetivando ser o agente cultural,
-          educacional e de
-          pesquisa voltada ao setor produtivo, à cultura material e à comunidade, se torna possível. Nasce o Museu
-          Nacional do
-          Calçado criado pelo Decreto Municipal de número 159/98 de 20 de outubro de 1998 e sob a tutela dos mesmos
-          incentivadores, foi inaugurado em setembro de 1999 com a primeira doação, feita pelo Sr. Gilberto Simon.
-        </p>
-        <p id="textGeral">
-          O Museu Nacional do Calçado implanta e acresce com projetos através das exposições permanentes, mostra-se o
-          histórico do
-          setor coureiro calçadista. Visitas guiadas, fotos, documentários, concursos, palestras e exposições
-          itinerantes são as
-          ações que se propõe, sendo assim um espaço dinâmico e interativo.
-        </p>
-        <p id="textGeral">
-          A identificação com o passado, unida ao desejo de superar o cotidiano e enriquecer o já existente, oportuniza
-          a harmonia
-          com a natureza e a sociedade, integrando à criação e à inovação ao meio cultural, sendo há um tempo singular
-          na
-          criatividade e ao mesmo tempo universal pela abrangência da obra.
-        </p>
-        <!-- Embed Vídeo -->
-        <div id="videoPlayer">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/yyL6ZAWYs-Y"
-              allowfullscreen></iframe>
-          </div>
-        </div>
-        <!-- Historia  -->
-        <div>
-          <h1 id="tituloMuseu">Nossa História</h1>
-          <p id="textGeral">
-            Após a criação do Museu Nacional do Calçado, em 1998, através do decreto Municipal 159/98, o MNC ganha um
-            espaço no
-            Câmpus I da Universidade Feevale, localizado na Av. Mauricio Cardoso, no bairro de Hamburgo Velho, em Novo
-            Hamburgo.
-            Esse espaço passou por uma reforma para poder receber o acervo do Museu. Ele encontra-se na entrada da
-            recepção do
-            Campus, facilitando assim o acesso ao MNC.
-          </p>
-          <p id="textGeral">
-            Em setembro de 1999 o Museu Nacional do Calçado abre as portas a comunidade, com a sua 1ª exposição. A
-            mostra era
-            composta pelo acervo do Sr. Carlos Gilberto Simon, 1º doador do MNC, quem esteve presente, e também, foi
-            homenageado
-            no evento.
-            A cerimônia contou com várias autoridades da época e teve o ato simbólico de corte de faixa para oficializar
-            a
-            abertura.
+      </p>
+      <p id="textGeral">
+        Desde a sua abertura, o MNC tem como principal objetivo conservar a memória do setor coureiro-calçadista,
+        ser um
+        espaço que visa preservar nossa história e nossa cultura. Também realiza, desde então, exposições,
+        encontros, cursos,
+        seminários e palestras, com o objetivo de cumprir esse papel social, cultural e educativo.
+      </p>
+    </div>
+    <!-- galeria -->
+    <div class="container-fluid" id="galeriaMuseu">
+      <gallery id="galeriaHistoria" [itemTemplate]="itemTemplate"></gallery>
+      <ng-template #itemTemplate let-index="index" let-type="type" let-data="data" let-currIndex="currIndex">
+        <span *ngIf="type === 'image' && index === currIndex" [@slideAnimation] class="item-text">
+          {{data.title}}
+        </span>
+      </ng-template>
+    </div>
 
-          </p>
-          <p id="textGeral">
-            Em 2005 o MNC, juntamente com a Feevale, publicou um livro chamado “Memória do Setor Coureiro-Calçadista:
-            Pioneiros e
-            Empreendedores do Vale do Rio dos Sinos” de autoria de Claudia Schemes, Cleber Cristiano Prodanov, Ida
-            Helena Thönn e
-            Rodrigo Ferla Martins, contendo relatos e vivencias desses, que fizeram da nossa região, o polo de sucesso
-            nacional.
-          </p>
-          <p id="textGeral">
-            Seu acervo apresenta peças raras, produzidas em diferentes épocas e continentes. Calçados produzidos há
-            muitos anos,
-            por simples sapateiros, têm hoje um valor histórico incalculável. A exposição permanente mostra a você a
-            vida e arte
-            de seus antepassados contando a história do nosso povo.
+    <!------------------------------------------------------------
+  ------------------------ mat-tab-group ---------------------
+------------------------------------------------------------------->
 
-          </p>
-          <p id="textGeral">
-            Desde a sua abertura, o MNC tem como principal objetivo conservar a memória do setor coureiro-calçadista,
-            ser um
-            espaço que visa preservar nossa história e nossa cultura. Também realiza, desde então, exposições,
-            encontros, cursos,
-            seminários e palestras, com o objetivo de cumprir esse papel social, cultural e educativo.
-          </p>
-        </div>
-        <!-- galeria -->
-        <div class="container-fluid" id="galeriaMuseu">
-          <gallery id="galeriaHistoria" [itemTemplate]="itemTemplate"></gallery>
-          <ng-template #itemTemplate let-index="index" let-type="type" let-data="data" let-currIndex="currIndex">
-            <span *ngIf="type === 'image' && index === currIndex" [@slideAnimation] class="item-text">
-              {{data.title}}
-            </span>
-          </ng-template>
-
-        </div>
+    <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4" mat-align-tabs="center">
+      <mat-tab isActive="true" style="background-color:#ffffff4d;" id="mat-Tab" label="Decreto">
         <!-- Decreto -->
-        <div>
+        <div class="container">
           <h1 id="tituloMuseu">Conheça o Decreto</h1>
           <div class="row">
             <div class="col-sm-9">
@@ -111,39 +77,73 @@
               <a class="grow"
                 href="https://leismunicipais.com.br/a/rs/n/novo-hamburgo/lei-ordinaria/1998/16/159/lei-ordinaria-n-159-1998-dispoe-sobre-a-distribuicao-de-panfletos-em-vias-publicas-e-da-outras-providencias/"
                 target="_blank">
-                <img src="assets/_img/museuGallery/decreto.png" class="rounded" id="decretoIcon"
-                  alt="Logo Oficial" />
+                <img src="assets/_img/museuGallery/decreto.png" class="rounded" id="decretoIcon" alt="Logo Oficial" />
               </a>
             </div>
           </div>
         </div>
+      </mat-tab>
+      <mat-tab label="Timeline">
         <!-- timeLine -->
-        <div class="row " id="museuTimeline">
-          <div class="col-sm-5">
-            <img class=" tl" id="tl01" src="assets/_img/museuGallery/linhaTempo.svg" alt="Linha do tempo" />
-          </div>
-          <div class="col-sm-7">
-            <div class="container">
-              <p id="tituloLinhaTempo">
-                A história do Museu<br />
-                através dos anos
-              </p>
-              <li routerLinkActive="active">
-                <a routerLink="../timeline" class="grow" id="imgLink">
-                  <img class="rounded" id="tl02" src="assets/_img/museuGallery/acessoLinhaTempo.png"
-                    alt="Linha do tempo" />
-                </a>
-              </li>
+        <div class="container">
+          <div class="row " id="museuTimeline">
+            <div class="col-sm-5">
+              <img class=" tl" id="tl01" src="assets/_img/museuGallery/linhaTempo.svg" alt="Linha do tempo" />
+            </div>
+            <div class="col-sm-7">
+              <div class="container">
+                <p id="tituloLinhaTempo">
+                  A história do Museu<br />
+                  através dos anos
+                </p>
+                <li routerLinkActive="active">
+                  <a routerLink="../timeline" class="grow" id="imgLink">
+                    <img class="rounded" id="tl02" src="assets/_img/museuGallery/acessoLinhaTempo.png"
+                      alt="Linha do tempo" />
+                  </a>
+                </li>
+              </div>
+            </div>
+            <!-- Imagem timeLine -->
+            <div>
+              <img src="assets/_img/museuGallery/anoAano.png" id="tl03" alt="Ano a Ano" />
             </div>
           </div>
-          <!-- Imagem timeLine -->
-          <div>
-            <img src="assets/_img/museuGallery/anoAano.png" id="tl03" alt="Ano a Ano" />
-          </div>
         </div>
+      </mat-tab>
 
+      <mat-tab label="Estatuto">
+        <div class="container">
+          <p id="textDecreto"> Conforme documento, o prefeito da cidade de Novo Hamburgo, José Airton dos Santos,
+            decretou no dia 20 de Outubro de 1998, a criação do Museu Nacional do Calçado, cujo objetivo precípuo
+            resgatar a memória histórica da atividade coureiro calçadista, em reconhecimento a quem faz de Novo
+            Hamburgo o maior pólo nacional deste segmento. <br><br> Para mais informações consulte o documento.</p>
+        </div>
+      </mat-tab>
+
+      <mat-tab label="Equipe Diretiva">
+        <div class="container">
+          <p id="textDecreto"> Conforme documento, o prefeito da cidade de Novo Hamburgo, José Airton dos Santos,
+            decretou no dia 20 de Outubro de 1998, a criação do Museu Nacional do Calçado, cujo objetivo precípuo
+            resgatar a memória histórica da atividade coureiro calçadista, em reconhecimento a quem faz de Novo
+            Hamburgo o maior pólo nacional deste segmento. <br><br> Para mais informações consulte o documento.</p>
+        </div>
+      </mat-tab>
+
+    </mat-tab-group>
+
+    <!-- Embed Vídeo -->
+    <div class="container">
+      <h1 id="tituloMuseu">Conhecendo o Museu</h1>
+      <p id="textDecreto"> Conforme documento, o prefeito da cidade de Novo Hamburgo, José Airton dos Santos,
+        decretou no dia 20 de Outubro de 1998, </p>
+      <div id="videoPlayer">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/yyL6ZAWYs-Y"
+            allowfullscreen></iframe>
+        </div>
       </div>
     </div>
+
     <router-outlet></router-outlet>
   </div>
-

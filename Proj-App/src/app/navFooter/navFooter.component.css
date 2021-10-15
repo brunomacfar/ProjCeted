@@ -88,7 +88,7 @@ footer{
 #logoFeevale{
     color: #fff;
     position: relative;
-    max-height: 45px;
+    max-height: 65px;
     width: auto;
     height: auto;
     display: block;
@@ -101,6 +101,13 @@ footer{
     padding-bottom: 35px;
     margin-top: 45px;
 
+}
+
+#logos{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 77px;
+    margin-left: 15px;
 }
 @media screen and (max-width : 480px) {
     footer{

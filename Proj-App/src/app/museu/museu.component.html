@@ -2,80 +2,61 @@
   <div class="container" id="museuContainer">
     <!-- Historia  -->
     <div>
-      <h1 id="tituloHistoria">Nossa História</h1>
+      <h2 id="tituloHistoria">Nossa História</h2>
       <p id="textGeral">
-        Após a criação do Museu Nacional do Calçado, em 1998, através do decreto Municipal 159/98, o MNC ganha um
-        espaço no
-        Câmpus I da Universidade Feevale, localizado na Av. Mauricio Cardoso, no bairro de Hamburgo Velho, em Novo
-        Hamburgo.
-        Esse espaço passou por uma reforma para poder receber o acervo do Museu. Ele encontra-se na entrada da
-        recepção do
-        Campus, facilitando assim o acesso ao MNC.
+        O Museu Nacional do Calçado (MNC) está localizado na cidade de Novo Hamburgo, no Rio Grande do Sul, Brasil. Criado em 1998, através do decreto municipal 159/98, em setembro de 1999 abriu suas portas à comunidade, realizando a primeira exposição na sua sede, que fica localizada no Câmpus I da Universidade Feevale. 
       </p>
       <p id="textGeral">
-        Em setembro de 1999 o Museu Nacional do Calçado abre as portas a comunidade, com a sua 1ª exposição. A
-        mostra era
-        composta pelo acervo do Sr. Carlos Gilberto Simon, 1º doador do MNC, quem esteve presente, e também, foi
-        homenageado
-        no evento.
-        A cerimônia contou com várias autoridades da época e teve o ato simbólico de corte de faixa para oficializar
-        a
-        abertura.
-
+        Seu acervo apresenta peças raras, produzidas em diferentes épocas e continentes. Para apresentar seu acervo, conta com exposições temporárias e uma exposição permanente, que aborda a vida e a arte dos sapateiros, contando a sua história. 
       </p>
       <p id="textGeral">
-        Em 2005 o MNC, juntamente com a Feevale, publicou um livro chamado “Memória do Setor Coureiro-Calçadista:
-        Pioneiros e
-        Empreendedores do Vale do Rio dos Sinos” de autoria de Claudia Schemes, Cleber Cristiano Prodanov, Ida
-        Helena Thönn e
-        Rodrigo Ferla Martins, contendo relatos e vivencias desses, que fizeram da nossa região, o polo de sucesso
-        nacional.
+        A associação Museu Nacional do Calçado (MNC) não possui caráter institucional religioso ou político-partidário e, no desenvolvimento de suas ações, se manterá adequada aos princípios da legalidade, impessoalidade, moralidade, publicidade, economicidade e eficiência, não fazendo qualquer discriminação de raça, cor, gênero ou religião.
       </p>
       <p id="textGeral">
-        Seu acervo apresenta peças raras, produzidas em diferentes épocas e continentes. Calçados produzidos há
-        muitos anos,
-        por simples sapateiros, têm hoje um valor histórico incalculável. A exposição permanente mostra a você a
-        vida e arte
-        de seus antepassados contando a história do nosso povo.
-
-      </p>
-      <p id="textGeral">
-        Desde a sua abertura, o MNC tem como principal objetivo conservar a memória do setor coureiro-calçadista,
-        ser um
-        espaço que visa preservar nossa história e nossa cultura. Também realiza, desde então, exposições,
-        encontros, cursos,
-        seminários e palestras, com o objetivo de cumprir esse papel social, cultural e educativo.
+        Desde a sua abertura, o Museu tem como principal objetivo conservar a memória do setor coureiro-calçadista, ser um espaço que visa preservar a sua história e cultura. Para cumprir com esse papel social, cultural e educativo, no espaço ocorrem exposições, encontros, cursos, seminários e palestras, entre outras atividades.
       </p>
     </div>
-    <!-- galeria -->
-    <div class="container-fluid" id="galeriaMuseu">
-      <gallery id="galeriaHistoria" [itemTemplate]="itemTemplate"></gallery>
-      <ng-template #itemTemplate let-index="index" let-type="type" let-data="data" let-currIndex="currIndex">
-        <span *ngIf="type === 'image' && index === currIndex" [@slideAnimation] class="item-text">
-          {{data.title}}
-        </span>
-      </ng-template>
-    </div>
 
+<!-- Embed Vídeo -->
+<div class="container">
+  <h4 id="tituloVideo">Vídeo: Conhecendo Museus | Episódio: MUSEU NACIONAL DO CALÇADO </h4>
+  <div id="videoPlayer">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/yyL6ZAWYs-Y"
+        allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+<!-- Galeria -->
+<div class="container-fluid" id="galeriaMuseu">
+  <gallery id="galeriaHistoria" [itemTemplate]="itemTemplate"></gallery>
+  <ng-template #itemTemplate let-index="index" let-type="type" let-data="data" let-currIndex="currIndex">
+    <span *ngIf="type === 'image' && index === currIndex" [@slideAnimation] class="item-text">
+      {{data.title}}
+    </span>
+  </ng-template>
+</div>
     <!------------------------------------------------------------
-  ------------------------ mat-tab-group ---------------------
+      ------------------------------------------------------------
+  ------------------------ mat-tab-group -------------------------
+  ------------------Documentação em museu.comp.ts-----------------
 ------------------------------------------------------------------->
 
     <mat-tab-group mat-stretch-tabs class="example-stretched-tabs mat-elevation-z4" mat-align-tabs="center">
       <mat-tab isActive="true" style="background-color:#ffffff4d;" id="mat-Tab" label="Decreto">
         <!-- Decreto -->
-        <div class="container">
-          <h1 id="tituloMuseu">Conheça o Decreto</h1>
+        <div class="container" id="containerMat">
           <div class="row">
             <div class="col-sm-9">
-              <p id="textDecreto"> Conforme documento, o prefeito da cidade de Novo Hamburgo, José Airton dos Santos,
-                decretou no dia 20 de Outubro de 1998, a criação do Museu Nacional do Calçado, cujo objetivo precípuo
-                resgatar a memória histórica da atividade coureiro calçadista, em reconhecimento a quem faz de Novo
-                Hamburgo o maior pólo nacional deste segmento. <br><br> Para mais informações consulte o documento.</p>
+              <p id="textBox"> 
+                Em 20 de outubro de 1998, o então prefeito de Novo Hamburgo, José Airton dos Santos, decretou a criação do Museu Nacional do Calçado. O objetivo foi resgatar a memória histórica da atividade coureiro-calçadista, em reconhecimento a quem faz de Novo Hamburgo o maior polo nacional deste segmento.              
+                 <br>
+                 <br> 
+                O documento pode ser consultado <a target="_blank" href="https://leismunicipais.com.br/a/rs/n/novo-hamburgo/decreto/1998/16/159/decreto-n-159-1998-cria-o-museu-nacional-do-calcado-e-da-outras-providencias?q=museu%20nacional">aqui.</a></p>
             </div>
             <div class="col-sm-3">
               <a class="grow"
-                href="https://leismunicipais.com.br/a/rs/n/novo-hamburgo/lei-ordinaria/1998/16/159/lei-ordinaria-n-159-1998-dispoe-sobre-a-distribuicao-de-panfletos-em-vias-publicas-e-da-outras-providencias/"
+                href="https://leismunicipais.com.br/a/rs/n/novo-hamburgo/decreto/1998/16/159/decreto-n-159-1998-cria-o-museu-nacional-do-calcado-e-da-outras-providencias?q=museu%20nacional"
                 target="_blank">
                 <img src="assets/_img/museuGallery/decreto.png" class="rounded" id="decretoIcon" alt="Logo Oficial" />
               </a>
@@ -83,9 +64,11 @@
           </div>
         </div>
       </mat-tab>
+       <!------------------------------------------------
+          ------------------------ timeLine --------------------------
+          ------------------------------------------------------------------------>
       <mat-tab label="Timeline">
-        <!-- timeLine -->
-        <div class="container">
+        <div class="container" id="containerMat">
           <div class="row " id="museuTimeline">
             <div class="col-sm-5">
               <img class=" tl" id="tl01" src="assets/_img/museuGallery/linhaTempo.svg" alt="Linha do tempo" />
@@ -111,39 +94,105 @@
           </div>
         </div>
       </mat-tab>
-
+         <!------------------------------------------------
+          ------------------------ estatuto --------------------------
+          ---------------------------------------------------------->
       <mat-tab label="Estatuto">
-        <div class="container">
-          <p id="textDecreto"> Conforme documento, o prefeito da cidade de Novo Hamburgo, José Airton dos Santos,
-            decretou no dia 20 de Outubro de 1998, a criação do Museu Nacional do Calçado, cujo objetivo precípuo
-            resgatar a memória histórica da atividade coureiro calçadista, em reconhecimento a quem faz de Novo
-            Hamburgo o maior pólo nacional deste segmento. <br><br> Para mais informações consulte o documento.</p>
+        <div class="container" id="containerMat">
+          <p id="textBox"> O MNC é uma Organização da Sociedade Civil de Interesse Público (OSCIP) e possui um estatuto social, que traz um conjunto de normas sobre seu funcionamento.
+              <br>
+              <br> 
+                   A associação Museu Nacional do Calçado (MNC) tem por finalidade:
+              <br>
+              <br>
+            </p>
+            <ul class="ul">
+              <li id="textEsta" > I. Promover a cultura, defesa e conservação do patrimônio histórico e artístico;</li>
+              <li id="textEsta" > II.	Conservar a memória da atividade produtiva de calçados, couros, acessórios, máquinas e componentes do país, principalmente do Estado do Rio Grande do Sul; </li>
+              <li id="textEsta" > III.	Manter exposição permanente desta atividade e conservar em seu acervo as doações recebidas; </li>
+              <li id="textEsta" > IV.	Promover exposições, cursos, seminários, palestras, visitas dirigidas, encontros e demais atividades afins; </li>
+              <li id="textEsta" > V. Acolher atividades culturais que promovam a integração do Museu com a comunidade e o voluntariado; </li>
+              <li id="textEsta" > VI.	Desenvolver e apoiar programas de arte-educação voltados à rede escolar em todos os níveis de ensino; </li>
+              <li id="textEsta" > VII.	Organizar, editar e publicar material informativo sobre suas atividades; </li>
+              <li id="textEsta" > VIII. Incentivar e promover convênios de cooperação nacional e internacional na área de atuação da entidade; </li>
+              <li id="textEsta" > IX. Desenvolver atividades de pesquisa, estudos, elaboração, coleta e difusão de dados sobre a memória da atividade coureiro e calçadista do país; </li>
+              <li id="textEsta" > X. Apoiar a ampliação e o aperfeiçoamento de atividades culturais e de pesquisa desenvolvida no Museu; </li>
+              <li id="textEsta" > XI. Trabalhar pela manutenção, ampliação e aperfeiçoamento do acervo do Museu; </li>
+              <li id="textEsta" > XII.	Contribuir para a divulgação dessas atividades, visando ao melhor aproveitamento possível da Instituição pela comunidade;</li>
+              <li id="textEsta" > PARÁGRAFO ÚNICO – Além das atividades mencionadas no capta deste artigo, a associação poderá desempenhar outras, desde que compatíveis com seu objetivo. </li>              
+          </ul>
+            <p id="textBox"> Para mais informações consulte o documento completo.</p>
+            
+          
         </div>
       </mat-tab>
-
+<!------------------------------------------------
+          ------------------------ Equipe Diretiva --------------------------
+          ---------------------------------------------------------->
       <mat-tab label="Equipe Diretiva">
-        <div class="container">
-          <p id="textDecreto"> Conforme documento, o prefeito da cidade de Novo Hamburgo, José Airton dos Santos,
-            decretou no dia 20 de Outubro de 1998, a criação do Museu Nacional do Calçado, cujo objetivo precípuo
-            resgatar a memória histórica da atividade coureiro calçadista, em reconhecimento a quem faz de Novo
-            Hamburgo o maior pólo nacional deste segmento. <br><br> Para mais informações consulte o documento.</p>
+        <div class="container" id="containerMat">
+          <p id="textBox">
+            <b>DIRETORIA EXECUTIVA MNC – 2019-2021</b><br>
+            Diretora Executiva: Ida Helena Thön <br>
+            Vice-diretor: Angelo Reinhermer<br>
+            Secretária: Janete Maino<br>
+            Tesoureiro: Marcelo Pavek Ayub <br>
+            2º Secretário: Leonardo Trevisan Bertolucci<br>
+            2ª Tesoureira: Laura Maximiliana dos Santos de Carrasco
+            <br><br>
+            <b>DIRETORIA EXECUTIVA MNC – 2017-2019</b><br>
+            Diretora Executiva: Márcia Blanco Cardoso<br>
+            Vice-diretor: Angelo Reinhermer <br>
+            Secretária: Janete Maino<br>
+            Tesoureiro: Alexandre Zeni
+            <br><br>
+            <b>DIRETORIA EXECUTIVA MNC – 2014-2016</b><br>
+            Diretora Executiva: Cristina Ennes da Silva <br>
+            Vice-diretora: Laura Maximiliana dos Santos de Carrasco<br>
+            Secretário: Angelo Reinhermer<br>
+            Tesoureiro: Alexandre Zeni
+            <br><br>
+            <b>DIRETORIA EXECUTIVA MNC – 2011-2013</b><br>
+            Diretora Executiva: Cristina Ennes da Silva <br>
+            Vice-diretora: Laura Maximiliana dos Santos de Carrasco<br>
+            Secretário: Angelo Reinhermer<br>
+            Tesoureiro: Alexandre Zeni
+            <br><br>
+            <b>DIRETORIA EXECUTIVA MNC – 2010</b><br>
+            Diretor Executivo: Cleber Cristiano Prodanov<br>
+            Vice-diretora: Laura Maximiliana dos Santos de Carrasco<br>
+            Secretário: Angelo Reinhermer<br>
+            Tesoureiro: Alexandre Zeni
+            <br><br>
+            <b>DIRETORIA EXECUTIVA MNC – 2008 </b><br>
+            Diretor Executivo: Cleber Cristiano Prodanov<br>
+            Vice-diretora: Laura Maximiliana dos Santos de Carrasco<br>
+            Secretário: Carlos Gilberto Simon<br>
+            Tesoureira: Angelita Renck Gerhardt
+            <br><br>
+            <b>DIRETORIA EXECUTIVA MNC – 2006-2007 </b><br>
+            Diretor Executivo: Cleber Cristiano Prodanov<br>
+            Vice-diretora: Laura Maximiliana dos Santos de Carrasco<br>
+            1º Secretário: Carlos Gilberto Simon<br>
+            2º Secretário: Paulo Raul Hanauer<br>
+            1ª Tesoureira: Angelita Renck Gerhardt<br>
+            2º Tesoureiro: Frederico Momberger Neto
+             </p>
         </div>
       </mat-tab>
 
     </mat-tab-group>
 
-    <!-- Embed Vídeo -->
-    <div class="container">
-      <h1 id="tituloMuseu">Conhecendo o Museu</h1>
-      <p id="textDecreto"> Conforme documento, o prefeito da cidade de Novo Hamburgo, José Airton dos Santos,
-        decretou no dia 20 de Outubro de 1998, </p>
-      <div id="videoPlayer">
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/yyL6ZAWYs-Y"
-            allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
 
+    <!-- galeria
+    <div class="container-fluid" id="galeriaMuseu">
+      <gallery id="galeriaHistoria" [itemTemplate]="itemTemplate"></gallery>
+      <ng-template #itemTemplate let-index="index" let-type="type" let-data="data" let-currIndex="currIndex">
+        <span *ngIf="type === 'image' && index === currIndex" [@slideAnimation] class="item-text">
+          {{data.title}}
+        </span>
+      </ng-template>
+    </div>
+    -->
     <router-outlet></router-outlet>
   </div>

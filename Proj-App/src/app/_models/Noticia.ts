@@ -1,4 +1,8 @@
 
+
+//  Interface para API de Noticias
+
+
 export interface Noticia{
     tituloUrl: string;
     titulo: string;
@@ -7,16 +11,3 @@ export interface Noticia{
     midia: string;
     destaque: string;
 }
-
-
-
-/*export interface Noticia {
-    id: number;
-    manchete: string;
-    categoria: string;
-    url: string;
-    descricao: string;
-    dataIni: Date;
-    img: string;
-}
-*/

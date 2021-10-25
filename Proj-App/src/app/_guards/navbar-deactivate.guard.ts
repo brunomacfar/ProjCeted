@@ -9,7 +9,7 @@ export interface DeactivateComponent {
 
 @Injectable()
 export class NavbarDeactivateGuard implements CanDeactivate<NavComponent> {
-
+    // COmponente desabilitado - não usado mais em versão atual do sistema.
     canDeactivate(
         component: NavComponent,
         route: ActivatedRouteSnapshot,

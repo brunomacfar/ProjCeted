@@ -87,12 +87,52 @@ p:hover {
 a:hover {
    text-decoration: none;
   }
-
+  .item-text{
+    position: relative;
+    /* top: 65%; */
+    /* left: 0; */
+    /* right: 0; */
+    color: #fff;
+    background-color: #00000060;
+    /* margin: 3em auto 0; */
+    border-radius: 4px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    max-width: 704px;
+    padding: 13px;
+    text-align: center;
+    margin-top: 333px;
+}
   
 @media screen and (max-width : 480px) {
-#logoLoad{
-max-width: 300px;
-width: 100%;
+  #logoLoad{
+  max-width: 300px;
+  width: 100%;
+  }
+  .item-text{
+    position: relative;
+    color: #fff;
+    background-color: #000;
+    border-radius: 0;
+    font-size: 10px;
+    width: 100%;
+    max-width: 100%;
+    padding: 5px 13px 20px 13px;
+    text-align: center;
+    margin-top: 338px;
+  }
+  .item-text:active{
+    outline: none;
+    color: white;
+  }
+  .item-text:hover{
+    outline: none;
+    color: white;
+  }
+  .item-text:focus{
+    outline: none;
+    color: white;
+  }
 
-}
 }

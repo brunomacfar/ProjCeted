@@ -25,3 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## DevTips
+Para executar um projeto angular, é necessário a configuração de um ambiente https://angular.io/guide/setup-local 
+
+A pasta Dist contém a build do projeta, qual necessita apenas ser copiada para a pasta raiz de um servidor para funcionar, sem nenhuma outra parametrização necessária.
+
+
+Principais arquivos
+#app-routing.module Rotas
+#app-module.ts indica quais biblios e componentes estao sendo usados pelo projeto.
+#brunomacfar@gmail.com endereço de contato.

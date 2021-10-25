@@ -1,16 +1,7 @@
-
-#conteudo{
-    position: relative;
-    max-width: 100%;
-    width: 100%;
-    max-height: 100vh;
-    height: 100vh;
-    padding-top: 45px;
-    background-color:rgba(0, 0, 0, 0.75);
-     z-index: auto;
-  }
-#museuContainer{
-    width: 100%;
-    max-width: 900px;
-   z-index: auto; 
+#ensinoContent{
+  max-height: 100vh;  
+  height: 100%;
+  width: 100%;
+  max-width: 900px;
+  padding-bottom: 40px;
 }

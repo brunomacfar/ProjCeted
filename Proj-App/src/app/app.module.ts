@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule, DatePipe } from '@angular/common';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { HashLocationStrategy, LocationStrategy  } from "@angular/common";
 
 
 import { registerLocaleData } from '@angular/common';
@@ -44,6 +45,7 @@ import { AtividadeEnsinoComponent } from './atividadeEnsino/atividadeEnsino.comp
 import { AcervoComponent } from './acervo/acervo.component';
 registerLocaleData(localeBr);
 
+// Aqui são importados os componentes utilizados na aplicação
 
 @NgModule({
    declarations: [			
@@ -85,6 +87,7 @@ registerLocaleData(localeBr);
    ],
    providers: [
       { provide: LOCALE_ID, useValue: 'pt-BR' },
+      {provide: LocationStrategy, useClass: HashLocationStrategy}, //Resposável pelo roteamento documentaçao disponvel https://medium.com/@dao.houssene/angular-the-hash-trap-b2d415c2c241
       MatDatepickerModule,
       MatNativeDateModule,
       MatMomentDateModule

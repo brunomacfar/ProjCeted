@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Evento } from '../_models/Evento';
-import { EventoService } from '../_services/evento.service';
 import { FormBuilder } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { NoticiaService } from '../_services/noticia.service';

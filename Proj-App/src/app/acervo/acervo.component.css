@@ -1,5 +1,8 @@
 
-
+#acervoCont{
+    width: 100%;
+    max-width: 900px;
+}
   .acervoMenu li ul li {
     background-color: rgba(0, 0, 0, 0.55);
     background-color: rgba(0, 0, 0, 0.95);
@@ -9,15 +12,11 @@
  
       }
       #finalAcervo {
-        padding-top: 45px;
-        padding-bottom: 45px;
+        padding-top: 30px;
+        padding-bottom: 40px;
       }
 
-      #containerAcervo{
-        width: 100%;
-        max-width: 900px;
-        width: auto;
-    }
+     
     #fundoAcervo{
         padding-top: 70px;
         background-color:rgba(0, 0, 0, 0.85);
@@ -30,11 +29,33 @@
         row-gap: 0px;
         column-gap: 15px;
     }
-    
     .gallery__img{
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: unset;
+    }
+    .gallery__item121:hover{
+        -webkit-box-shadow: 0px 0px 6px 3px rgba(150,116,64,0.84); 
+        box-shadow: 0px 0px 6px 3px rgba(150,116,64,0.84);
+        -moz-transform: scale(2);
+        -webkit-transform: scale(2);
+        transform: scale(2);
+        border: #9674405d;
+        z-index: 9;
+        position: absolute;
+        padding: 10px;
+        width: 50%;
+        height: 50%;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        
+    }
+    gallery-thumbs
+    .gallery-thumbs{
+        width: 100%;
+        height: 63px !important;
     }
     
     .gallery__item--1{
@@ -122,9 +143,11 @@
         padding-bottom: 45px;
     }
 
+ 
     @media screen and (max-width : 480px) {
 
         figure {
             margin: 1px 1px 1px 1px;
         }
+      
     }

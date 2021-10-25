@@ -31,7 +31,9 @@
       line-height: 150%;
       display: block;
       align-items: center;
+      padding-top: 35px;
   }
+  
   @media screen and (max-width : 480px) {
     .inforTitulo{
       text-align: center;

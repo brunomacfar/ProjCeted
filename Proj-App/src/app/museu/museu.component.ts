@@ -6,6 +6,10 @@ import { Router } from '@angular/router';
 import { NavService } from '../_services/nav.service';
 
 
+//DOcumentaçao para mat-tab-group https://material.angular.io/components/tabs/overview
+// Documentação sobre o componente de Galeria que se encontra  https://ngx-gallery.netlify.app/#/advanced
+
+
 @Component({
   selector: 'app-museu',
   templateUrl: './museu.component.html',
@@ -42,7 +46,7 @@ export class MuseuComponent implements OnInit {
     galleryRef.addImage({
       src: 'assets/_img/museuGallery/historia/img3.png',
       thumb: 'assets/_img/museuGallery/historia/img3.png',
-      title: 'Autoridades presentes, da direita para a esquerda: Sr. José Airton dos Santos, Prof. Lauro Tischer, Sr. Carlos Gilberto Simon, Prof. Cleber Prodanov e Sr. Gilberto Steffens (1999)'
+      title: 'José Airton dos Santos (prefeito de Novo Hamburgo); Lauro Tischer (reitor da Feevale); Carlos Gilberto Simon (primeiro doador do MNC- designer e prioritário dos Calçado Czarina); Cleber Prodanov (Diretor do MNC); Gilberto Steffens (ex - presidente da ASPEUR).'
     });
     galleryRef.addImage({
       src: 'assets/_img/museuGallery/historia/img4.jpg',
